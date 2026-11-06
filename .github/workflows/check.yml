@@ -15,3 +15,4 @@ jobs:
           node-version: '24'
       - run: npm test
       - run: npm run build
+      - run: git diff --exit-code -- LUMEN.html

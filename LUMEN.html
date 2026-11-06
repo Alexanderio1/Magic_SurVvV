@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1114">
+  <meta name="description" content="LUMEN: Последний круг — бесплатная игра на выживание. Собирай осколки, усиливай магию и переживи три минуты тьмы.">
+  <title>LUMEN — Последний круг</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxMDFhMjAiLz48cGF0aCBkPSJNMzIgNiAzOSAyNSA1OCAzMiAzOSAzOSAzMiA1OCAyNSAzOSA2IDMyIDI1IDI1WiIgZmlsbD0iI2Q0Zjc5MyIvPjxjaXJjbGUgY3g9IjMyIiBjeT0iMzIiIHI9IjUiIGZpbGw9IiMxMDFhMjAiLz48L3N2Zz4K" type="image/svg+xml">
+  <style>
+:root{color-scheme:dark;--bg:#0c1114;--panel:#11191d;--line:#293337;--muted:#84918e;--text:#e7eae2;--lime:#d4f793;--cyan:#83dfcc;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 65% 0%,#1a2524 0,transparent 47%),var(--bg);color:var(--text);min-height:100vh}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,canvas:focus-visible{outline:2px solid var(--lime);outline-offset:4px}button{border:0}button:disabled{cursor:default}.app{max-width:1536px;margin:auto;padding:0 48px}.header{height:112px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:14px;color:var(--text);text-decoration:none;font-size:27px;letter-spacing:5px;font-weight:700}.brand-symbol{font-size:48px;line-height:1;color:var(--lime);font-weight:400}.brand small{display:block;font-size:8px;letter-spacing:3.1px;color:var(--muted);margin-top:4px}.header-note{font-size:10px;letter-spacing:1.7px;color:var(--muted);display:flex;align-items:center;gap:10px}.status-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px #d4f79344}.icon-button{background:transparent;border:1px solid var(--line);border-radius:6px;padding:10px 13px;color:#b6c1b8;font-size:11px}.icon-button:hover{border-color:var(--lime)}.intro{display:flex;justify-content:space-between;align-items:center;margin:39px 0 28px}.eyebrow{font-size:9px;font-weight:600;letter-spacing:2px;color:var(--lime);margin:0 0 13px}h1{font-size:clamp(28px,3vw,43px);font-weight:500;letter-spacing:-1.8px;margin:0}h2{font-size:clamp(28px,3vw,47px);font-weight:500;letter-spacing:-1.8px;margin:0 0 15px}h3{font-size:18px;font-weight:500;letter-spacing:-.5px;margin:0 0 24px}.intro>p{color:var(--muted);font-size:12px;line-height:1.8;margin:0 0 0 20px}.game-layout{display:grid;grid-template-columns:minmax(0,1fr) 248px;gap:22px}.arena-panel{align-self:start;border:1px solid #34413f;border-radius:9px;overflow:hidden;background:#101a1d;box-shadow:0 20px 65px #0003}.arena-top,.arena-bottom{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;font-size:9px;letter-spacing:1.5px;color:#9aa79c;background:#121c1f}.arena-top>span:first-child{color:#d6ddce}.live-dot{display:inline-block;width:6px;height:6px;background:var(--cyan);border-radius:50%;margin-right:8px}.arena-top>span:last-child{font-size:8px;color:#6c8079}.arena-bottom{font-size:8px;letter-spacing:1px;padding:16px}.arena-bottom .status-dot{margin-right:8px}.arena-bottom b{font-weight:500;margin-left:9px;color:#d6ddce}.game-stage{position:relative;isolation:isolate;aspect-ratio:1120/680;overflow:hidden;background:#12232a}canvas{width:100%;height:100%;display:block;touch-action:none}.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(ellipse,#10202260,#08151aa6);backdrop-filter:blur(2px);padding:25px;z-index:3}.overlay[hidden],[hidden]{display:none!important}.welcome{max-width:550px}.sigil{width:92px;height:92px;border:1px solid #d4f79345;border-radius:50%;display:grid;place-items:center;margin:0 auto 25px;position:relative;box-shadow:0 0 60px #b7ef7e10,inset 0 0 30px #b7ef7e08}.sigil:before{content:"";position:absolute;inset:13px;border:1px solid #d4f79333;transform:rotate(45deg)}.sigil span{font-size:64px;line-height:1;color:var(--lime);text-shadow:0 0 30px #d4f79345}.overlay .eyebrow{font-size:8px;letter-spacing:2.6px}.overlay-copy{color:#a0b2ac;font-size:12px;line-height:1.9;margin:0 0 25px}.primary{display:inline-flex;align-items:center;justify-content:space-between;gap:45px;background:var(--lime);color:#17231a;padding:16px 23px;min-width:224px;border-radius:5px;font-size:13px;font-weight:650;transition:background .2s,transform .2s;box-shadow:0 3px 25px #d4f79312}.primary:hover{background:#e2ffb3;transform:translateY(-2px)}.primary span{font-size:20px;line-height:1}.welcome-meta{display:flex;justify-content:center;gap:24px;font-size:9px;color:#81958b;margin-top:24px}.sidebar{display:flex;flex-direction:column;gap:16px}.guide-card{background:#141d20;border:1px solid var(--line);border-radius:8px;padding:24px 21px}.guide-card .eyebrow{font-size:8px;letter-spacing:1.5px;color:#84978c}.control-row{display:flex;align-items:center;gap:17px;margin-top:19px}.control-row p{font-size:11px;margin:0}.control-row small{display:block;color:var(--muted);font-size:9px;margin-top:4px}kbd{font-family:inherit;border:1px solid #42504b;border-bottom-width:3px;border-radius:4px;background:#1d292b;color:#b8c5b8;width:25px;height:26px;display:inline-grid;place-items:center;font-size:10px}.wide-key{width:63px;font-size:9px}.key-cluster{width:63px;flex-shrink:0;text-align:center}.key-cluster>kbd{margin-bottom:3px}.key-cluster span{display:flex;gap:3px}.key-cluster kbd{height:19px;width:19px;font-size:9px}.control-row>kbd:not(.wide-key){margin-left:19px;margin-right:19px}.touch-tip{font-size:9px;color:#72857b;line-height:1.6;margin:22px 0 0;padding-top:15px;border-top:1px solid var(--line)}.shard-card{background:radial-gradient(circle at 90% 0,#25372b,transparent 60%),#141d20;position:relative}.shard-card h3{margin-bottom:11px}.shard-card>p:last-child{color:var(--muted);font-size:11px;line-height:1.8;margin:0}.shard-icon{position:absolute;right:19px;top:15px;color:var(--lime);font-size:21px;transform:rotate(12deg)}.record-card{padding:8px 5px;display:grid;grid-template-columns:1fr auto;align-items:center}.record-card>span{font-size:8px;letter-spacing:1.2px;color:var(--muted)}.record-card strong{font-size:25px;font-weight:400;font-variant-numeric:tabular-nums;color:#b7c8ac}.record-card small{font-size:9px;color:#61756c;grid-column:1/-1;margin-top:3px}footer{display:flex;justify-content:space-between;color:#63746c;font-size:9px;padding:30px 0;letter-spacing:.3px}.footer-separator{margin:0 12px;color:#374a40}.hud{position:absolute;inset:18px 20px auto;display:flex;justify-content:space-between;align-items:start;pointer-events:none;z-index:1;text-shadow:0 2px 4px #000}.hud-health{width:21%;font-size:8px;letter-spacing:1px}.hud-health>span{display:flex;justify-content:space-between;margin-bottom:8px}.hud b{font-weight:600;color:#fff}.bar{height:5px;background:#ffffff18;border-radius:5px;overflow:hidden}.bar i{display:block;width:100%;height:100%;background:var(--lime);transition:width .15s}.hud-center{text-align:center}.hud-center strong{font-size:27px;font-weight:500;letter-spacing:2px;font-variant-numeric:tabular-nums}.hud-center small{display:block;font-size:7px;letter-spacing:1px;color:#b1c6b8;margin-top:3px}.hud-right{display:flex;gap:12px;font-size:8px;align-items:center}.hud-right>span{display:flex;flex-direction:column;gap:5px}.hud-right b{font-size:18px}.hud-right button{pointer-events:auto;color:#d7eadc;background:#182d2dc9;border:1px solid #74948144;border-radius:4px;width:29px;height:29px}.xp-hud{position:absolute;bottom:17px;left:20px;right:20px;display:flex;align-items:center;gap:12px;font-size:7px;letter-spacing:1px;pointer-events:none}.xp-hud .bar{flex:1;height:3px}.xp-hud .bar i{background:var(--cyan);width:0}.xp-hud>span:last-child{color:#d4f793}.upgrade-dialog{width:100%;max-width:740px}.upgrade-dialog h2{font-size:31px}.upgrade-dialog .overlay-copy{margin-bottom:18px}.upgrade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.upgrade-card{text-align:left;padding:19px 16px;background:#152c2ef5;border:1px solid #476253;border-radius:7px;color:var(--text);transition:transform .15s,border-color .15s}.upgrade-card:hover{transform:translateY(-4px);border-color:var(--lime);background:#203c34}.upgrade-icon{font-size:29px;color:var(--lime);display:block;margin-bottom:14px}.upgrade-card strong{font-size:13px;font-weight:500;display:block}.upgrade-card p{font-size:10px;color:#b2c5b8;line-height:1.6;min-height:48px;margin:9px 0 14px}.upgrade-card small{color:var(--lime);font-size:8px;letter-spacing:1px}.keyboard-hint{font-size:9px;color:#829e90;margin:18px 0 0}.results{display:flex;justify-content:center;gap:42px;margin:25px 0}.results strong{font-size:27px;display:block;font-weight:400;color:var(--lime)}.results span{font-size:8px;letter-spacing:1px;color:var(--muted);display:block;margin-top:8px}.touch-controls{position:absolute;inset:auto 25px 40px;display:flex;justify-content:space-between;align-items:end;pointer-events:none;z-index:2}#joystick{width:92px;height:92px;border-radius:50%;background:#e0ffdd0c;border:1px solid #c1eab433;display:grid;place-items:center;touch-action:none;pointer-events:auto}#joystick-knob{width:35px;height:35px;border-radius:50%;border:1px solid #d4f79366;background:#d4f79322;pointer-events:none}#touch-dash{width:57px;height:57px;border-radius:50%;font-size:28px;color:var(--lime);background:#152b28c9;border:1px solid #c1eab444;pointer-events:auto;touch-action:none}
+@media(min-width:1450px){.game-layout{grid-template-columns:minmax(0,1fr) 270px}.guide-card{padding:27px}.sidebar{gap:20px}}@media(max-width:1100px){.app{padding:0 25px}.header{height:90px}.game-layout{grid-template-columns:minmax(0,1fr) 210px;gap:16px}.guide-card{padding:19px 16px}.sigil{width:65px;height:65px;margin-bottom:18px}.sigil span{font-size:47px}.welcome-meta{margin-top:17px}.overlay-copy{margin-bottom:18px}.control-row{gap:11px}.hud{inset:12px 12px auto}.hud-right{gap:8px}.hud-center strong{font-size:22px}.arena-bottom{font-size:7px}.upgrade-card{padding:13px 11px}.upgrade-icon{margin-bottom:8px}.upgrade-dialog h2{font-size:25px}}
+@media(max-width:850px){.game-layout{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1.1fr 1fr}.record-card{grid-column:1/-1}.header-note{display:none}.intro{margin-top:28px}.intro>p{font-size:10px}.guide-card h3{margin-bottom:15px}.control-row{display:inline-flex;margin-right:10px}.control-row p small{display:none}.control-row>kbd:not(.wide-key){margin:0}.touch-tip{margin-top:16px}.record-card{padding:2px 10px;grid-template-columns:1fr auto 1fr;gap:20px}.record-card small{grid-column:auto;text-align:right}.arena-bottom{font-size:8px}}
+@media(max-width:540px){.app{padding:0 13px}.header{height:76px}.brand{font-size:21px;gap:10px}.brand-symbol{font-size:38px}.brand small{font-size:7px;letter-spacing:2px}.icon-button{font-size:9px}.intro{margin:25px 0 20px}.intro>p{display:none}h1{font-size:30px}.game-stage{aspect-ratio:4/5}canvas{object-fit:fill}.arena-top{padding:13px 12px;font-size:8px;letter-spacing:.7px}.arena-top>span:last-child{font-size:7px}.arena-bottom{padding:12px 10px;font-size:6px;letter-spacing:.3px}.arena-bottom b{margin-left:3px}.overlay{padding:16px}.sigil{width:80px;height:80px;margin-bottom:25px}.sigil span{font-size:57px}.welcome h2{font-size:36px}.overlay-copy{font-size:11px}.welcome-meta{gap:16px;font-size:8px;margin-top:22px}.hud{inset:13px 10px auto}.hud-health{width:27%;font-size:6px}.hud-right{font-size:6px;gap:7px}.hud-right b{font-size:14px}.hud-center strong{font-size:22px}.hud-center small{font-size:6px}.hud-right button{width:24px;height:27px}.xp-hud{bottom:12px;left:12px;right:12px;font-size:6px;gap:8px}.xp-hud>span:first-child{display:none}.upgrade-dialog h2{font-size:27px}.upgrade-grid{grid-template-columns:1fr;gap:8px}.upgrade-card{padding:12px 14px;display:grid;grid-template-columns:35px 1fr auto;align-items:center;gap:0 10px}.upgrade-icon{grid-row:1/3;margin:0;font-size:26px}.upgrade-card strong{font-size:12px}.upgrade-card p{min-height:0;margin:3px 0 0;font-size:9px;grid-column:2}.upgrade-card small{grid-column:3;grid-row:1/3;font-size:7px}.keyboard-hint{display:none}.sidebar{gap:12px;grid-template-columns:1fr}.guide-card{padding:18px}.shard-card{display:none}.record-card{grid-template-columns:1fr auto}.record-card small{grid-column:1/-1;text-align:left;margin-top:-14px}.control-row{margin-top:4px;margin-right:12px;gap:8px}.control-row p{font-size:10px}.touch-tip{margin-top:12px;padding-top:10px}footer{font-size:8px;padding:24px 0}footer>span:last-child{display:none}.results{gap:30px}.results strong{font-size:25px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <a class="brand" href="" aria-label="Lumen — главная"><span class="brand-symbol">✧</span><span>LUMEN<small>ПОСЛЕДНИЙ КРУГ</small></span></a>
+      <div class="header-note"><span class="status-dot"></span> МАЛЕНЬКАЯ МАГИЯ. БОЛЬШОЙ ХАОС.</div>
+      <button class="icon-button" id="sound-button" aria-label="Включить звук" aria-pressed="false">Звук: выкл.</button>
+    </header>
+    <main>
+      <div class="intro"><div><p class="eyebrow">АРКАДА НА ВЫЖИВАНИЕ / 01</p><h1>Останься светом.</h1></div><p>Тьма наступает. Твоя магия — тоже.<br>Один маг. Три минуты. Ещё одна попытка.</p></div>
+      <div class="game-layout">
+        <section class="arena-panel" aria-label="Игровая арена">
+          <div class="arena-top"><span><i class="live-dot"></i> СУМЕРЕЧНАЯ РОЩА</span><span id="wave-label">ОЖИДАНИЕ ЗАБЕГА</span></div>
+          <div class="game-stage" id="stage">
+            <canvas id="game" width="1120" height="680" tabindex="0" aria-label="Арена. Двигайтесь на WASD или стрелках, пробел — рывок, P — пауза."></canvas>
+            <div class="hud" id="hud" hidden><div class="hud-health"><span>ЖИЗНЬ <b id="health-text">100 / 100</b></span><div class="bar"><i id="health-bar"></i></div></div><div class="hud-center"><strong id="timer">00:00</strong><small>ДО РАССВЕТА 03:00</small></div><div class="hud-right"><span>УРОВЕНЬ <b id="level">1</b></span><span>ПОБЕЖДЕНО <b id="kills">0</b></span><button id="pause-button" aria-label="Приостановить игру"><svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M1 1h3v12H1zM8 1h3v12H8z"/></svg></button></div></div>
+            <div class="xp-hud" id="xp-hud" hidden><span>ОСКОЛКИ СВЕТА</span><div class="bar"><i id="xp-bar"></i></div><span id="dash-label">ПРОБЕЛ · РЫВОК ГОТОВ</span></div>
+            <div class="overlay" id="overlay">
+              <div class="welcome" id="welcome"><div class="sigil" aria-hidden="true"><span>✧</span></div><p class="eyebrow">СВЕТ ЕЩЁ НЕ ПОГАС</p><h2>Последний круг</h2><p class="overlay-copy">Двигайся. Собирай осколки. Становись сильнее.<br>Заклинания найдут врагов сами.</p><button class="primary" id="start-button">Войти в рощу <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button><div class="welcome-meta"><span>◷ 3 минуты</span><span>✧ Автомагия</span><span>↻ Новый забег</span></div></div>
+              <div class="dialog" id="pause-dialog" hidden><p class="eyebrow">МИР ПОДОЖДЁТ</p><h2>Тихий момент</h2><p class="overlay-copy">Соберись с мыслями. Свет всё ещё с тобой.</p><button class="primary" id="resume-button">Продолжить <span>→</span></button></div>
+              <div class="upgrade-dialog" id="upgrade-dialog" hidden><p class="eyebrow">ТВОЯ МАГИЯ РАСТЁТ</p><h2>Выбери свой свет</h2><p class="overlay-copy">Одно усиление. Много новых возможностей.</p><div class="upgrade-grid" id="upgrade-choices"></div><p class="keyboard-hint">Выбор: клавиши 1, 2, 3 или нажатие на карточку</p></div>
+              <div class="dialog" id="end-dialog" hidden><p class="eyebrow" id="end-eyebrow">ЕЩЁ ОДНА ИСКРА</p><h2 id="end-title">Свет вернётся</h2><p class="overlay-copy" id="end-copy"></p><div class="results"><div><strong id="result-time"></strong><span>ВРЕМЯ</span></div><div><strong id="result-kills"></strong><span>ПОБЕЖДЕНО</span></div><div><strong id="result-level"></strong><span>УРОВЕНЬ</span></div></div><button class="primary" id="restart-button">Ещё одна попытка <span>↻</span></button></div>
+            </div>
+            <div class="touch-controls" id="touch-controls" hidden><div id="joystick" aria-label="Область управления движением"><div id="joystick-knob"></div></div><button id="touch-dash" aria-label="Рывок">↯</button></div>
+          </div>
+          <div class="arena-bottom"><span><span class="status-dot"></span> МАГИЯ РАБОТАЕТ АВТОМАТИЧЕСКИ</span><span>ДОЖИВИ ДО РАССВЕТА <b>03:00</b></span></div>
+        </section>
+        <aside class="sidebar"><section class="guide-card"><p class="eyebrow">ПОЛЕВЫЕ ЗАМЕТКИ</p><h3>Всё в твоих руках.</h3><div class="control-row"><div class="key-cluster"><kbd>W</kbd><span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div><p>Двигайся<small>или используй стрелки</small></p></div><div class="control-row"><kbd class="wide-key">SPACE</kbd><p>Рывок<small>сквозь опасность</small></p></div><div class="control-row"><kbd>P</kbd><p>Пауза<small>можно выдохнуть</small></p></div><p class="touch-tip">На телефоне: джойстик слева и рывок справа.</p></section><section class="guide-card shard-card"><span class="shard-icon">◆</span><p class="eyebrow">СОБИРАЙ ОСКОЛКИ</p><h3>Из искры — в бурю.</h3><p>Осколки побеждённых врагов дают опыт. Новый уровень — новое усиление магии.</p></section><section class="record-card"><span>ЛИЧНЫЙ РЕКОРД</span><strong id="record">00:00</strong><small id="record-caption">Каждая попытка — начало.</small></section></aside>
+      </div>
+    </main>
+    <footer><span>LUMEN <span class="footer-separator">/</span> Сделано из света и упрямства.</span><span>Без загрузок. Без аккаунта. Просто игра.</span></footer>
+  </div>
+  <script>
+(() => {
+'use strict';
+const WIDTH = typeof window !== 'undefined' && window.matchMedia('(max-width: 540px)').matches ? 544 : 1120;
+const HEIGHT = 680;
+const RUN_DURATION = 180;
+const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
+const xpRequired = level => 6 + level * 4;
+const formatTime = seconds => `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
+function direction(x, y) {
+  const length = Math.hypot(x, y);
+  return length > 0 ? { x: x / length, y: y / length } : { x: 0, y: 0 };
+}
+const UPGRADES = [
+  { id: 'power', icon: '✦', name: 'Острая искра', description: 'Урон магических стрел увеличивается на 35%.', apply: p => { p.damage *= 1.35; } },
+  { id: 'haste', icon: 'ϟ', name: 'Быстрая мысль', description: 'Магические стрелы вылетают на 20% чаще.', apply: p => { p.fireInterval = Math.max(.12, p.fireInterval * .8); } },
+  { id: 'multishot', icon: '⋔', name: 'Созвездие', description: 'Ещё одна стрела в каждом залпе. Больше света!', available: p => p.shots < 5, apply: p => { p.shots += 1; } },
+  { id: 'nova', icon: '◎', name: 'Лунная волна', description: 'Круговой взрыв вокруг тебя. Повторный выбор усиливает его.', apply: p => { p.nova += 1; } },
+  { id: 'orbit', icon: '◈', name: 'Маленькая луна', description: 'Вокруг тебя вращается защитный огонёк. До четырёх лун.', available: p => p.orbits < 4, apply: p => { p.orbits += 1; } },
+  { id: 'speed', icon: '»', name: 'Лёгкий шаг', description: 'Скорость движения +15%. Рывок восстанавливается быстрее.', apply: p => { p.speed *= 1.15; p.dashInterval = Math.max(1.5, p.dashInterval * .85); } },
+  { id: 'magnet', icon: '◇', name: 'Притяжение', description: 'Собирай осколки с большего расстояния: радиус +45%.', apply: p => { p.magnet *= 1.45; } },
+  { id: 'vitality', icon: '♡', name: 'Тёплый свет', description: '+25 к максимальному здоровью и восстановление 45 здоровья.', apply: p => { p.maxHp += 25; p.hp = Math.min(p.maxHp, p.hp + 45); } },
+  { id: 'regen', icon: '✳', name: 'Второе дыхание', description: 'Восстанавливай 1,5 здоровья каждую секунду.', apply: p => { p.regen += 1.5; } },
+];
+
+function createGame() {
+  return {
+    state: 'playing', time: 0, kills: 0, level: 1, xp: 0, nextId: 1,
+    spawnTimer: .8, fireTimer: .2, novaTimer: 3, enemies: [], bullets: [], gems: [], particles: [], rings: [], choices: [],
+    player: { x: WIDTH / 2, y: HEIGHT / 2, radius: 13, hp: 100, maxHp: 100, speed: 190, damage: 25, fireInterval: .65, shots: 1, magnet: 90, nova: 0, orbits: 0, regen: 0, invincible: 0, dashCooldown: 0, dashTime: 0, dashInterval: 4, facing: { x: 0, y: -1 }, dashDirection: { x: 0, y: -1 } },
+  };
+}
+
+function chooseUpgrades(player, random = Math.random) {
+  const pool = UPGRADES.filter(u => !u.available || u.available(player));
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+  return pool.slice(0, 3);
+}
+
+function checkLevel(game, random) {
+  if (game.xp < xpRequired(game.level)) return;
+  game.xp -= xpRequired(game.level);
+  game.level += 1;
+  game.player.hp = Math.min(game.player.maxHp, game.player.hp + 8);
+  game.state = 'upgrade';
+  game.choices = chooseUpgrades(game.player, random);
+}
+function selectUpgrade(game, id, random = Math.random) {
+  if (game.state !== 'upgrade') return false;
+  const choice = game.choices.find(u => u.id === id);
+  if (!choice) return false;
+  choice.apply(game.player);
+  game.choices = [];
+  game.state = 'playing';
+  checkLevel(game, random);
+  return true;
+}
+
+function dash(game) {
+  const p = game.player;
+  if (game.state !== 'playing' || p.dashCooldown > 0) return false;
+  p.dashCooldown = p.dashInterval;
+  p.dashTime = .19;
+  p.invincible = Math.max(p.invincible, .3);
+  p.dashDirection = { ...p.facing };
+  return true;
+}
+
+function spawnEnemy(game, random = Math.random) {
+  const side = Math.floor(random() * 4);
+  let x = random() * WIDTH, y = random() * HEIGHT;
+  if (side === 0) x = -25;
+  if (side === 1) x = WIDTH + 25;
+  if (side === 2) y = -25;
+  if (side === 3) y = HEIGHT + 25;
+  const roll = random();
+  const type = game.time > 70 && roll < .2 ? 'brute' : game.time > 25 && roll < .4 ? 'wisp' : 'shade';
+  const stats = { shade: [30, 47, 13, 10, 2], wisp: [20, 87, 10, 8, 2], brute: [100, 33, 22, 20, 5] }[type];
+  const scale = 1 + game.time / 160;
+  const enemy = { id: game.nextId++, x, y, type, hp: stats[0] * scale, maxHp: stats[0] * scale, speed: stats[1] * (1 + game.time / 450), radius: stats[2], damage: stats[3], xp: stats[4], hit: 0, orbitCooldown: 0, phase: random() * Math.PI * 2 };
+  game.enemies.push(enemy);
+  return enemy;
+}
+
+function burst(game, x, y, color, count = 8) {
+  // Deterministic cosmetic particles keep gameplay randomness independent.
+  for (let i = 0; i < count; i++) {
+    const angle = (i / count) * Math.PI * 2 + game.time;
+    game.particles.push({ x, y, vx: Math.cos(angle) * (35 + i * 7), vy: Math.sin(angle) * (35 + i * 7), life: .45, maxLife: .45, color });
+  }
+}
+function hitEnemy(game, enemy, damage) {
+  if (enemy.hp <= 0) return;
+  enemy.hp -= damage;
+  enemy.hit = .12;
+  if (enemy.hp <= 0) {
+    game.kills += 1;
+    game.gems.push({ x: enemy.x, y: enemy.y, value: enemy.xp });
+    burst(game, enemy.x, enemy.y, enemy.type === 'brute' ? '#e5a58f' : '#a8d5c5');
+  }
+}
+function orbitPositions(game) {
+  return Array.from({ length: game.player.orbits }, (_, i) => {
+    const angle = game.time * 2.6 + i * Math.PI * 2 / game.player.orbits;
+    return { x: game.player.x + Math.cos(angle) * 69, y: game.player.y + Math.sin(angle) * 69 };
+  });
+}
+
+function update(game, input, dt, random = Math.random) {
+  if (game.state !== 'playing') return;
+  dt = clamp(dt, 0, .05);
+  game.time = Math.min(RUN_DURATION, game.time + dt);
+  if (game.time >= RUN_DURATION) { game.state = 'won'; return; }
+  const p = game.player;
+  p.invincible = Math.max(0, p.invincible - dt);
+  p.dashCooldown = Math.max(0, p.dashCooldown - dt);
+  p.hp = Math.min(p.maxHp, p.hp + p.regen * dt);
+  const movement = direction(input.x, input.y);
+  if (movement.x || movement.y) p.facing = movement;
+  const moving = p.dashTime > 0 ? p.dashDirection : movement;
+  const speed = p.speed * (p.dashTime > 0 ? 4 : 1);
+  p.x = clamp(p.x + moving.x * speed * dt, 20, WIDTH - 20);
+  p.y = clamp(p.y + moving.y * speed * dt, 65, HEIGHT - 38);
+  if (p.dashTime > 0) burst(game, p.x, p.y, '#bcecad', 1);
+  p.dashTime = Math.max(0, p.dashTime - dt);
+  game.spawnTimer -= dt;
+  if (game.spawnTimer <= 0) {
+    const count = 1 + Math.floor(game.time / 45);
+    for (let i = 0; i < count && game.enemies.length < 180; i++) spawnEnemy(game, random);
+    game.spawnTimer = Math.max(.3, 1.15 - game.time * .004);
+  }
+  game.fireTimer -= dt;
+  if (game.fireTimer <= 0 && game.enemies.length) {
+    const targets = [...game.enemies].sort((a, b) => distance(p, a) - distance(p, b));
+    for (let i = 0; i < p.shots; i++) {
+      const target = targets[i % targets.length];
+      const aim = direction(target.x - p.x, target.y - p.y);
+      const angle = Math.atan2(aim.y, aim.x) + (i >= targets.length ? (i % 2 ? .09 : -.09) : 0);
+      game.bullets.push({ x: p.x, y: p.y, vx: Math.cos(angle) * 480, vy: Math.sin(angle) * 480, life: 2.6, damage: p.damage });
+    }
+    game.fireTimer = p.fireInterval;
+  }
+  game.novaTimer -= dt;
+  if (p.nova > 0 && game.novaTimer <= 0) {
+    const radius = 115 + p.nova * 14;
+    game.rings.push({ x: p.x, y: p.y, radius, life: .5 });
+    for (const enemy of game.enemies) if (distance(p, enemy) < radius + enemy.radius) hitEnemy(game, enemy, 35 * p.nova);
+    game.novaTimer = 3.5;
+  }
+  const orbits = orbitPositions(game);
+  for (const enemy of game.enemies) {
+    if (enemy.hp <= 0) continue;
+    enemy.hit = Math.max(0, enemy.hit - dt);
+    enemy.orbitCooldown = Math.max(0, enemy.orbitCooldown - dt);
+    const aim = direction(p.x - enemy.x, p.y - enemy.y);
+    enemy.x += aim.x * enemy.speed * dt;
+    enemy.y += aim.y * enemy.speed * dt;
+    if (enemy.orbitCooldown <= 0 && orbits.some(o => distance(o, enemy) < enemy.radius + 11)) {
+      hitEnemy(game, enemy, 24 + p.damage * .4);
+      enemy.orbitCooldown = .45;
+    }
+    if (enemy.hp > 0 && p.invincible <= 0 && distance(p, enemy) < p.radius + enemy.radius) {
+      p.hp = Math.max(0, p.hp - enemy.damage);
+      p.invincible = .75;
+      enemy.x -= aim.x * 22;
+      enemy.y -= aim.y * 22;
+      burst(game, p.x, p.y, '#f4a08f', 12);
+      if (p.hp <= 0) { game.state = 'lost'; return; }
+    }
+  }
+  for (const bullet of game.bullets) {
+    bullet.x += bullet.vx * dt;
+    bullet.y += bullet.vy * dt;
+    bullet.life -= dt;
+    for (const enemy of game.enemies) {
+      if (enemy.hp > 0 && distance(bullet, enemy) < enemy.radius + 6) {
+        hitEnemy(game, enemy, bullet.damage);
+        bullet.life = 0;
+        break;
+      }
+    }
+  }
+  game.enemies = game.enemies.filter(e => e.hp > 0);
+  game.bullets = game.bullets.filter(b => b.life > 0 && b.x > -40 && b.x < WIDTH + 40 && b.y > -40 && b.y < HEIGHT + 40);
+  game.gems = game.gems.filter(gem => {
+    const d = distance(p, gem);
+    if (d < p.radius + 10) { game.xp += gem.value; return false; }
+    if (d < p.magnet) {
+      const aim = direction(p.x - gem.x, p.y - gem.y);
+      const step = Math.min(d, (200 + (p.magnet - d) * 3) * dt);
+      gem.x += aim.x * step;
+      gem.y += aim.y * step;
+    }
+    return true;
+  });
+  for (const particle of game.particles) { particle.x += particle.vx * dt; particle.y += particle.vy * dt; particle.life -= dt; }
+  game.particles = game.particles.filter(particle => particle.life > 0).slice(-350);
+  for (const ring of game.rings) ring.life -= dt;
+  game.rings = game.rings.filter(ring => ring.life > 0);
+  checkLevel(game, random);
+}
+
+
+const $ = id => document.getElementById(id);
+const canvas = $('game');
+canvas.width = WIDTH; canvas.height = HEIGHT;
+$('stage').style.aspectRatio = `${WIDTH} / ${HEIGHT}`;
+const ctx = canvas.getContext('2d');
+let game = createGame();
+game.state = 'menu';
+let previousState = '', previousLevel = 0, lastFrame = 0, ambientTime = 0, soundEnabled = false, audioContext;
+let record = { time: 0, kills: 0 };
+try { const value = JSON.parse(localStorage.getItem('lumen-record')); if (value && Number.isFinite(value.time) && Number.isFinite(value.kills)) record = value; } catch { /* Storage may be unavailable in private browsing. */ }
+const keys = new Set();
+const touch = { x: 0, y: 0, active: false, id: null };
+const isTouch = matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0;
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const scenery = Array.from({ length: 100 }, (_, i) => ({ x: ((i * 173.3 + 73) % WIDTH), y: ((i * 93.7 + 29) % HEIGHT), size: 1 + i % 4, phase: i * 1.9 }));
+
+function refreshRecord() { $('record').textContent = formatTime(record.time); $('record-caption').textContent = record.kills ? `${record.kills} врагов побеждено в лучшем забеге.` : 'Каждая попытка — начало.'; }
+refreshRecord();
+function tone(frequency, duration = .08, volume = .04) {
+  if (!soundEnabled) return;
+  try {
+    audioContext ??= new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator(), gain = audioContext.createGain();
+    oscillator.type = 'sine'; oscillator.frequency.value = frequency;
+    gain.gain.setValueAtTime(volume, audioContext.currentTime);
+    gain.gain.exponentialRampToValueAtTime(.001, audioContext.currentTime + duration);
+    oscillator.connect(gain); gain.connect(audioContext.destination); oscillator.start(); oscillator.stop(audioContext.currentTime + duration);
+  } catch { /* Sound is optional. */ }
+}
+function clearInput() { keys.clear(); touch.x = 0; touch.y = 0; touch.active = false; touch.id = null; $('joystick-knob').style.transform = ''; }
+function start() { clearInput(); game = createGame(); previousState = ''; previousLevel = 0; tone(392, .2); syncUI(); canvas.focus({ preventScroll: true }); }
+function pause() { if (game.state === 'playing') { game.state = 'paused'; clearInput(); syncUI(); } }
+function resume() { if (game.state === 'paused') { game.state = 'playing'; syncUI(); canvas.focus({ preventScroll: true }); } }
+function doDash() { if (dash(game)) tone(165, .14, .06); }
+function choose(index) { const choice = game.choices[index]; if (choice && selectUpgrade(game, choice.id)) { tone(660, .2); syncUI(); if (game.state === 'playing') canvas.focus({ preventScroll: true }); } }
+$('start-button').addEventListener('click', start);
+$('restart-button').addEventListener('click', start);
+$('pause-button').addEventListener('click', pause);
+$('resume-button').addEventListener('click', resume);
+$('sound-button').addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  $('sound-button').textContent = `Звук: ${soundEnabled ? 'вкл.' : 'выкл.'}`;
+  $('sound-button').setAttribute('aria-pressed', String(soundEnabled));
+  $('sound-button').setAttribute('aria-label', soundEnabled ? 'Выключить звук' : 'Включить звук');
+  tone(523, .15);
+  if (audioContext?.state === 'suspended') audioContext.resume().catch(() => {});
+});
+document.addEventListener('keydown', event => {
+  const controlCodes = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyW', 'KeyA', 'KeyS', 'KeyD', 'Space', 'KeyP', 'Escape'];
+  if (game.state !== 'menu' && controlCodes.includes(event.code) && !(event.code === 'Space' && event.target instanceof HTMLButtonElement)) event.preventDefault();
+  keys.add(event.code);
+  if (event.repeat) return;
+  if (event.code === 'KeyP' || event.code === 'Escape') game.state === 'paused' ? resume() : pause();
+  if (event.code === 'Space' && !(event.target instanceof HTMLButtonElement)) doDash();
+  if (game.state === 'upgrade' && /^Digit[123]$/.test(event.code)) choose(Number(event.code.slice(-1)) - 1);
+});
+document.addEventListener('keyup', event => keys.delete(event.code));
+window.addEventListener('blur', () => { clearInput(); pause(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden) { clearInput(); pause(); } });
+const joystick = $('joystick');
+function moveJoystick(event) {
+  if (event.pointerId !== touch.id) return;
+  const rect = joystick.getBoundingClientRect();
+  let x = (event.clientX - rect.left - rect.width / 2) / 35, y = (event.clientY - rect.top - rect.height / 2) / 35;
+  const length = Math.max(1, Math.hypot(x, y)); x /= length; y /= length;
+  touch.x = Math.abs(x) < .12 ? 0 : x; touch.y = Math.abs(y) < .12 ? 0 : y;
+  $('joystick-knob').style.transform = `translate(${x * 27}px, ${y * 27}px)`;
+}
+joystick.addEventListener('pointerdown', event => { if (touch.active) return; event.preventDefault(); touch.active = true; touch.id = event.pointerId; joystick.setPointerCapture(event.pointerId); moveJoystick(event); });
+joystick.addEventListener('pointermove', moveJoystick);
+for (const name of ['pointerup', 'pointercancel', 'lostpointercapture']) joystick.addEventListener(name, event => { if (event.pointerId === touch.id) clearInput(); });
+$('touch-dash').addEventListener('pointerdown', event => { event.preventDefault(); doDash(); });
+
+function syncUI() {
+  const changed = previousState !== game.state || previousLevel !== game.level;
+  if (changed) {
+    $('overlay').hidden = game.state === 'playing';
+    for (const [id, state] of [['welcome', 'menu'], ['pause-dialog', 'paused'], ['upgrade-dialog', 'upgrade']]) $(id).hidden = game.state !== state;
+    $('end-dialog').hidden = !['won', 'lost'].includes(game.state);
+    $('hud').hidden = game.state === 'menu'; $('xp-hud').hidden = game.state === 'menu';
+    $('touch-controls').hidden = !isTouch || game.state !== 'playing';
+    if (game.state === 'upgrade') {
+      clearInput();
+      $('upgrade-choices').replaceChildren(...game.choices.map((choice, index) => {
+        const button = document.createElement('button'); button.className = 'upgrade-card';
+        button.innerHTML = `<span class="upgrade-icon" aria-hidden="true">${choice.icon}</span><strong>${choice.name}</strong><p>${choice.description}</p><small>ВЫБРАТЬ · ${index + 1}</small>`;
+        button.addEventListener('click', () => choose(index)); return button;
+      }));
+      tone(784, .25);
+      $('upgrade-choices').firstElementChild.focus({ preventScroll: true });
+    }
+    if (game.state === 'paused') $('resume-button').focus({ preventScroll: true });
+    if (game.state === 'lost' || game.state === 'won') {
+      clearInput();
+      const won = game.state === 'won';
+      $('end-eyebrow').textContent = won ? 'РАССВЕТ ПРИШЁЛ' : 'ЕЩЁ ОДНА ИСКРА';
+      $('end-title').textContent = won ? 'Ты остался светом.' : 'Свет вернётся.';
+      $('end-copy').textContent = won ? 'Три минуты тьмы позади. Роща запомнит твоё имя.' : 'Даже маленькая искра оставляет след. Попробуем ещё раз?';
+      $('result-time').textContent = formatTime(game.time); $('result-kills').textContent = game.kills; $('result-level').textContent = game.level;
+      if (game.time > record.time || (game.time === record.time && game.kills > record.kills)) {
+        record = { time: game.time, kills: game.kills };
+        try { localStorage.setItem('lumen-record', JSON.stringify(record)); } catch { /* Optional persistence. */ }
+        refreshRecord();
+      }
+      tone(won ? 880 : 147, .45); $('restart-button').focus({ preventScroll: true });
+    }
+    previousState = game.state; previousLevel = game.level;
+  }
+  $('timer').textContent = formatTime(game.time);
+  $('health-text').textContent = `${Math.ceil(game.player.hp)} / ${game.player.maxHp}`;
+  $('health-bar').style.width = `${game.player.hp / game.player.maxHp * 100}%`;
+  $('health-bar').style.background = game.player.hp < game.player.maxHp * .3 ? '#ed9b8d' : '#d4f793';
+  $('xp-bar').style.width = `${clamp(game.xp / xpRequired(game.level) * 100, 0, 100)}%`;
+  $('level').textContent = game.level; $('kills').textContent = game.kills;
+  $('wave-label').textContent = game.state === 'menu' ? 'ОЖИДАНИЕ ЗАБЕГА' : `ВОЛНА ${Math.min(4, 1 + Math.floor(game.time / 45))} / 4`;
+  $('dash-label').textContent = game.player.dashCooldown > 0 ? `РЫВОК · ${game.player.dashCooldown.toFixed(1)} С` : `${isTouch ? '↯' : 'ПРОБЕЛ'} · РЫВОК ГОТОВ`;
+}
+
+function circle(x, y, radius, color) { ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2); ctx.fill(); }
+function diamond(x, y, radius, color) { ctx.fillStyle = color; ctx.beginPath(); ctx.moveTo(x, y - radius); ctx.lineTo(x + radius * .65, y); ctx.lineTo(x, y + radius); ctx.lineTo(x - radius * .65, y); ctx.closePath(); ctx.fill(); }
+function glow(x, y, radius, color) { const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius); gradient.addColorStop(0, color); gradient.addColorStop(1, 'transparent'); circle(x, y, radius, gradient); }
+const background = document.createElement('canvas'); background.width = WIDTH; background.height = HEIGHT;
+const bg = background.getContext('2d');
+function prepareBackground() {
+  bg.fillStyle = '#122329'; bg.fillRect(0, 0, WIDTH, HEIGHT);
+  const grad = bg.createRadialGradient(WIDTH / 2, HEIGHT / 2, 50, WIDTH / 2, HEIGHT / 2, 650); grad.addColorStop(0, '#1b3335'); grad.addColorStop(1, '#0b1921'); bg.fillStyle = grad; bg.fillRect(0, 0, WIDTH, HEIGHT);
+  bg.strokeStyle = '#759f7c09'; bg.lineWidth = 1;
+  for (let x = 0; x < WIDTH; x += 56) { bg.beginPath(); bg.moveTo(x, 0); bg.lineTo(x, HEIGHT); bg.stroke(); }
+  for (let y = 0; y < HEIGHT; y += 56) { bg.beginPath(); bg.moveTo(0, y); bg.lineTo(WIDTH, y); bg.stroke(); }
+  bg.save(); bg.translate(WIDTH / 2, HEIGHT / 2); bg.strokeStyle = '#aecb8d0e';
+  for (const radius of [115, 122, 212, 219]) { bg.beginPath(); bg.arc(0, 0, radius, 0, Math.PI * 2); bg.stroke(); }
+  for (let i = 0; i < 12; i++) { bg.save(); bg.rotate(i * Math.PI / 6); bg.strokeRect(-5, 198, 10, 10); bg.restore(); }
+  bg.restore();
+  for (const s of scenery) {
+    bg.strokeStyle = '#47625425'; bg.lineWidth = 1; bg.beginPath(); bg.moveTo(s.x, s.y + 5); bg.lineTo(s.x - 2, s.y - s.size); bg.moveTo(s.x, s.y + 5); bg.lineTo(s.x + 4, s.y); bg.stroke();
+    if (s.size > 3) { bg.fillStyle = '#263a3b'; bg.beginPath(); bg.ellipse(s.x + 12, s.y, 5 + s.size, 3 + s.size, -.4, 0, Math.PI * 2); bg.fill(); }
+  }
+  for (let i = 0; i < 20; i++) {
+    const x = i * 65 - 40, y = i % 2 ? 12 : HEIGHT - 12;
+    bg.fillStyle = '#0b1b21'; bg.beginPath(); bg.moveTo(x - 45, y); bg.lineTo(x - 10, y + (y < 100 ? 68 : -68)); bg.lineTo(x + 25, y); bg.fill();
+  }
+}
+prepareBackground();
+function render() {
+  ctx.drawImage(background, 0, 0);
+  const t = reducedMotion ? 0 : ambientTime;
+  for (let i = 0; i < 28; i++) {
+    const s = scenery[i]; const x = s.x + Math.sin(t * .3 + s.phase) * 15, y = s.y + Math.cos(t * .2 + s.phase) * 11;
+    circle(x, y, 1.2, `rgba(186,220,142,${.15 + Math.sin(t + s.phase) * .12})`);
+  }
+  if (game.state === 'menu') {
+    for (let i = 0; i < 7; i++) { const a = i * 1.2, x = WIDTH / 2 + Math.cos(a) * 340, y = HEIGHT / 2 + Math.sin(a) * 220; drawEnemy({ x, y, radius: i % 3 === 0 ? 19 : 13, type: i % 3 === 0 ? 'brute' : 'shade', hit: 0, phase: i }); }
+    for (const s of scenery.slice(30, 42)) diamond(s.x, s.y, 5, '#84c6a980');
+    return;
+  }
+  for (const gem of game.gems) { diamond(gem.x, gem.y, gem.value > 2 ? 7 : 5, '#84dcc3'); diamond(gem.x - 1, gem.y - 1, 2, '#e2ffdf'); }
+  for (const ring of game.rings) { ctx.strokeStyle = `rgba(174,222,247,${ring.life * 1.5})`; ctx.lineWidth = 2 + ring.life * 4; ctx.beginPath(); ctx.arc(ring.x, ring.y, ring.radius * (1 - ring.life), 0, Math.PI * 2); ctx.stroke(); ctx.strokeStyle = `rgba(174,222,247,${ring.life * .4})`; ctx.beginPath(); ctx.arc(ring.x, ring.y, ring.radius, 0, Math.PI * 2); ctx.stroke(); }
+  for (const enemy of game.enemies) drawEnemy(enemy);
+  for (const bullet of game.bullets) {
+    ctx.strokeStyle = '#b9efad70'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(bullet.x - bullet.vx * .025, bullet.y - bullet.vy * .025); ctx.lineTo(bullet.x, bullet.y); ctx.stroke(); circle(bullet.x, bullet.y, 4, '#e2ffc1');
+  }
+  const p = game.player;
+  glow(p.x, p.y, 75, '#c5ef8f14');
+  const moons = orbitPositions(game);
+  if (moons.length) { ctx.strokeStyle = '#aacdb51c'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(p.x, p.y, 69, 0, Math.PI * 2); ctx.stroke(); }
+  for (const moon of moons) { glow(moon.x, moon.y, 19, '#a5eddf40'); diamond(moon.x, moon.y, 10, '#b2ffe7'); }
+  ctx.save(); ctx.translate(p.x, p.y);
+  if (p.invincible > 0 && Math.floor(p.invincible * 22) % 2) ctx.globalAlpha = .55;
+  ctx.fillStyle = '#0004'; ctx.beginPath(); ctx.ellipse(0, 16, 18, 7, 0, 0, Math.PI * 2); ctx.fill();
+  const bob = reducedMotion ? 0 : Math.sin(t * 5) * 1.5;
+  ctx.translate(0, bob);
+  ctx.fillStyle = '#4e8c80'; ctx.beginPath(); ctx.moveTo(0, -12); ctx.quadraticCurveTo(-12, -10, -17, 16); ctx.quadraticCurveTo(0, 24, 17, 16); ctx.quadraticCurveTo(12, -10, 0, -12); ctx.fill();
+  ctx.fillStyle = '#263e3e'; ctx.beginPath(); ctx.moveTo(0, -10); ctx.lineTo(-6, 15); ctx.lineTo(8, 15); ctx.fill();
+  circle(0, -10, 10, '#78a88d'); circle(0, -7, 7, '#152d31');
+  circle(-3, -8, 1.5, '#e3ffc1'); circle(3, -8, 1.5, '#e3ffc1');
+  ctx.strokeStyle = '#bbcb9b'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(17, 16); ctx.lineTo(17, -16); ctx.stroke(); diamond(17, -21, 6, '#d4f793');
+  if (p.dashTime > 0) { ctx.strokeStyle = '#d4f793'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(0, 0, 24, 0, Math.PI * 2); ctx.stroke(); }
+  ctx.restore();
+  for (const particle of game.particles) { ctx.globalAlpha = particle.life / particle.maxLife; circle(particle.x, particle.y, 2, particle.color); } ctx.globalAlpha = 1;
+  if (p.hp < p.maxHp * .3) { ctx.strokeStyle = '#cd665b55'; ctx.lineWidth = 10; ctx.strokeRect(0, 0, WIDTH, HEIGHT); }
+}
+function drawEnemy(enemy) {
+  const { x, y, radius: r, type } = enemy;
+  const bob = reducedMotion ? 0 : Math.sin(ambientTime * 4 + enemy.phase) * 3;
+  ctx.save(); ctx.translate(x, y + bob);
+  ctx.fillStyle = '#0003'; ctx.beginPath(); ctx.ellipse(0, r, r, r * .35, 0, 0, Math.PI * 2); ctx.fill();
+  if (type === 'wisp') {
+    diamond(0, 0, r * 1.5, enemy.hit ? '#fff' : '#a8a0d1'); diamond(0, 1, r * .8, '#423f63'); circle(0, -1, 2, '#ece6ff');
+  } else {
+    ctx.fillStyle = enemy.hit ? '#e9ffdf' : type === 'brute' ? '#836d66' : '#546d69';
+    ctx.beginPath(); ctx.moveTo(-r, r); ctx.quadraticCurveTo(-r * 1.4, -r, 0, -r * 1.1); ctx.quadraticCurveTo(r * 1.4, -r, r, r); ctx.lineTo(r * .4, r * .65); ctx.lineTo(0, r); ctx.lineTo(-r * .4, r * .65); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = type === 'brute' ? '#382e32' : '#20373b'; ctx.beginPath(); ctx.ellipse(0, -r * .1, r * .65, r * .5, 0, 0, Math.PI * 2); ctx.fill();
+    circle(-r * .27, -r * .14, type === 'brute' ? 2.5 : 1.8, type === 'brute' ? '#f6b4a0' : '#b7e7d0'); circle(r * .27, -r * .14, type === 'brute' ? 2.5 : 1.8, type === 'brute' ? '#f6b4a0' : '#b7e7d0');
+    if (type === 'brute') { ctx.strokeStyle = '#c09f82'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(-r * .6, -r * .7); ctx.lineTo(-r * .9, -r * 1.4); ctx.moveTo(r * .6, -r * .7); ctx.lineTo(r * .9, -r * 1.4); ctx.stroke(); }
+  }
+  ctx.restore();
+}
+let uiTime = 0;
+function frame(timestamp) {
+  const dt = lastFrame ? Math.min((timestamp - lastFrame) / 1000, .05) : 0;
+  lastFrame = timestamp; ambientTime += dt;
+  const kills = game.kills, hp = game.player.hp;
+  update(game, { x: Number(keys.has('KeyD') || keys.has('ArrowRight')) - Number(keys.has('KeyA') || keys.has('ArrowLeft')) + touch.x, y: Number(keys.has('KeyS') || keys.has('ArrowDown')) - Number(keys.has('KeyW') || keys.has('ArrowUp')) + touch.y }, dt);
+  if (game.kills > kills) tone(440 + game.kills % 5 * 55, .05, .015);
+  if (game.player.hp < hp) tone(100, .12, .05);
+  uiTime += dt;
+  if (uiTime > .08 || previousState !== game.state || previousLevel !== game.level) { syncUI(); uiTime = 0; }
+  render(); requestAnimationFrame(frame);
+}
+syncUI(); requestAnimationFrame(frame);
+
+})();
+</script>
+</body>
+</html>
