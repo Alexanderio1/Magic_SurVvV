@@ -1,16 +1,17 @@
 import { mkdir, cp, rm, readFile, writeFile } from 'node:fs/promises';
 
 // Keep editable modules for development and ship a single file for players.
-const [html, css, icon, core, game] = await Promise.all(
-  ['index.html', 'style.css', 'favicon.svg', 'src/core.js', 'src/game.js']
+const [html, css, icon, core, cosmetics, game] = await Promise.all(
+  ['index.html', 'style.css', 'favicon.svg', 'src/core.js', 'src/cosmetics.js', 'src/game.js']
     .map(file => readFile(new URL(`../${file}`, import.meta.url), 'utf8')),
 );
 const coreScript = core.replace(/^export (?=(?:const|function)\b)/gm, '');
-const gameScript = game.replace(/^import \{[^\n]+\} from '\.\/core\.js';\r?\n/, '');
-if (/^\s*(?:import|export)\s/m.test(`${coreScript}\n${gameScript}`)) {
+const cosmeticsScript = cosmetics.replace(/^export (?=(?:const|function)\b)/gm, '');
+const gameScript = game.replace(/^import \{[^\n]+\} from '\.\/(?:core|cosmetics)\.js';\r?\n/gm, '');
+if (/^\s*(?:import|export)\s/m.test(`${coreScript}\n${cosmeticsScript}\n${gameScript}`)) {
   throw new Error('Standalone build needs updating for new module imports or exports.');
 }
-const script = `(() => {\n'use strict';\n${coreScript}\n${gameScript}\n})();`
+const script = `(() => {\n'use strict';\n${coreScript}\n${cosmeticsScript}\n${gameScript}\n})();`
   .replace(/<\/script/gi, '<\\/script');
 const standalone = html
   .replace('<link rel="icon" href="./favicon.svg" type="image/svg+xml">',

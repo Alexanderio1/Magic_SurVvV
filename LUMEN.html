@@ -15,6 +15,13 @@
 @media(max-width:540px){.app{padding:0 13px}.header{height:76px}.brand{font-size:21px;gap:10px}.brand-symbol{font-size:38px}.brand small{font-size:7px;letter-spacing:2px}.icon-button{font-size:9px}.intro{margin:25px 0 20px}.intro>p{display:none}h1{font-size:30px}.game-stage{aspect-ratio:4/5}canvas{object-fit:fill}.arena-top{padding:13px 12px;font-size:8px;letter-spacing:.7px}.arena-top>span:last-child{font-size:7px}.arena-bottom{padding:12px 10px;font-size:6px;letter-spacing:.3px}.arena-bottom b{margin-left:3px}.overlay{padding:16px}.sigil{width:80px;height:80px;margin-bottom:25px}.sigil span{font-size:57px}.welcome h2{font-size:36px}.overlay-copy{font-size:11px}.welcome-meta{gap:16px;font-size:8px;margin-top:22px}.hud{inset:13px 10px auto}.hud-health{width:27%;font-size:6px}.hud-right{font-size:6px;gap:7px}.hud-right b{font-size:14px}.hud-center strong{font-size:22px}.hud-center small{font-size:6px}.hud-right button{width:24px;height:27px}.xp-hud{bottom:12px;left:12px;right:12px;font-size:6px;gap:8px}.xp-hud>span:first-child{display:none}.upgrade-dialog h2{font-size:27px}.upgrade-grid{grid-template-columns:1fr;gap:8px}.upgrade-card{padding:12px 14px;display:grid;grid-template-columns:35px 1fr auto;align-items:center;gap:0 10px}.upgrade-icon{grid-row:1/3;margin:0;font-size:26px}.upgrade-card strong{font-size:12px}.upgrade-card p{min-height:0;margin:3px 0 0;font-size:9px;grid-column:2}.upgrade-card small{grid-column:3;grid-row:1/3;font-size:7px}.keyboard-hint{display:none}.sidebar{gap:12px;grid-template-columns:1fr}.guide-card{padding:18px}.shard-card{display:none}.record-card{grid-template-columns:1fr auto}.record-card small{grid-column:1/-1;text-align:left;margin-top:-14px}.control-row{margin-top:4px;margin-right:12px;gap:8px}.control-row p{font-size:10px}.touch-tip{margin-top:12px;padding-top:10px}footer{font-size:8px;padding:24px 0}footer>span:last-child{display:none}.results{gap:30px}.results strong{font-size:25px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
+/* Grimoire and earned cosmetics. */
+select{font:inherit;color:var(--text);background:#17292b;border:1px solid #4d6358;border-radius:5px;padding:9px 10px;max-width:100%;cursor:pointer}select:focus-visible{outline:2px solid var(--lime);outline-offset:2px}select option{color:#e5eee7;background:#17292b}select option:disabled{color:#778980}.starter-label{display:block;font-size:7px;letter-spacing:1.6px;color:#9cb19f;margin:0 0 7px}.starter-select{display:block;margin:0 auto 18px;min-width:224px;font-size:12px;text-align:center}.welcome .sigil{width:65px;height:65px;margin-bottom:15px}.welcome .sigil span{font-size:48px}.welcome .overlay-copy{margin-bottom:14px}.welcome h2{font-size:36px}.welcome-meta{margin-top:16px}.grimoire-card,.cosmetics-card{padding:20px}.active-spells{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:13px}.spell-badge{display:flex;align-items:center;gap:5px;border:1px solid #496252;border-radius:5px;padding:6px 8px;background:#1b2b2d;font-size:13px}.spell-badge small{font-size:9px;color:#dce9d4}details summary{cursor:pointer;font-size:10px;color:#a8bba8;line-height:1.6}details[open] summary{margin-bottom:12px}.spell-catalog{max-height:270px;overflow:auto}.spell-entry{border-top:1px solid var(--line);padding:9px 0}.spell-entry strong{font-size:11px;font-weight:500}.spell-entry p{font-size:9px;color:var(--muted);line-height:1.65;margin:4px 0 0}.cosmetics-card h3{font-size:16px;margin-bottom:16px}.cosmetics-card label{font-size:10px;display:block;color:#a8bba8;margin-bottom:6px}.cosmetics-card select{width:100%;font-size:10px;margin-bottom:14px}.cosmetics-card ul{padding:0;list-style:none;margin:0}.cosmetics-card li{font-size:9px;line-height:1.7;color:#82978a;padding:6px 0;border-top:1px solid var(--line)}.cosmetics-card li.earned{color:var(--lime)}.unlock-toast{position:absolute;top:82px;left:50%;transform:translateX(-50%);max-width:85%;padding:10px 16px;border:1px solid var(--lime);border-radius:7px;background:#172d2ef0;color:var(--lime);font-size:11px;text-align:center;pointer-events:none;z-index:4}.upgrade-card .upgrade-rank{display:block;font-size:8px;letter-spacing:1px;color:var(--lime);margin-top:7px}.xp-hud>span:first-child{min-width:85px}.sidebar{max-height:none}.game-layout{align-items:start}.hud-center small{letter-spacing:.4px}
+@media(max-width:850px){.grimoire-card,.cosmetics-card{grid-row:2}.shard-card{display:none}.guide-card:first-child{grid-column:1/-1}.record-card{grid-row:3}.welcome .sigil{width:60px;height:60px}}
+@media(max-width:540px){.grimoire-card,.cosmetics-card{grid-row:auto}.record-card{grid-row:auto}.welcome h2{font-size:30px}.welcome .sigil{width:53px;height:53px;margin-bottom:13px}.welcome .sigil span{font-size:40px}.welcome .eyebrow{font-size:7px;margin-bottom:10px}.starter-select{font-size:11px;padding:8px 10px;margin-bottom:14px}.welcome .primary{padding:12px 20px}.welcome-meta{font-size:7px;gap:13px;margin-top:15px}.xp-hud>span:first-child{display:block;font-size:6px;min-width:58px}.xp-hud>span:last-child{font-size:5px}.upgrade-card .upgrade-rank{grid-column:2;grid-row:2;font-size:7px;margin-top:3px}.upgrade-card p{grid-row:3}.upgrade-card small{grid-row:1/4}.upgrade-card .upgrade-icon{grid-row:1/4}.unlock-toast{font-size:9px;top:72px;width:max-content}.overlay-copy{line-height:1.6}.grimoire-card,.cosmetics-card{padding:17px}}
+@media(max-width:360px){.welcome h2{font-size:25px;margin-bottom:9px}.welcome .sigil{width:42px;height:42px;margin-bottom:9px}.welcome .sigil span{font-size:32px}.welcome .overlay-copy{font-size:9px;margin-bottom:10px}.welcome-meta{font-size:6px;gap:9px}.starter-select{margin-bottom:10px}.upgrade-dialog h2{font-size:23px}.upgrade-dialog .overlay-copy{font-size:9px;margin-bottom:10px}.upgrade-card{padding:9px}}
+.shard-card{display:none}
+
 </style>
 </head>
 <body>
@@ -28,22 +35,23 @@
       <div class="intro"><div><p class="eyebrow">АРКАДА НА ВЫЖИВАНИЕ / 01</p><h1>Останься светом.</h1></div><p>Тьма наступает. Твоя магия — тоже.<br>Один маг. Три минуты. Ещё одна попытка.</p></div>
       <div class="game-layout">
         <section class="arena-panel" aria-label="Игровая арена">
-          <div class="arena-top"><span><i class="live-dot"></i> СУМЕРЕЧНАЯ РОЩА</span><span id="wave-label">ОЖИДАНИЕ ЗАБЕГА</span></div>
+          <div class="arena-top"><span><i class="live-dot"></i> <span id="field-name">СУМЕРЕЧНАЯ РОЩА</span></span><span id="wave-label">ОЖИДАНИЕ ЗАБЕГА</span></div>
           <div class="game-stage" id="stage">
             <canvas id="game" width="1120" height="680" tabindex="0" aria-label="Арена. Двигайтесь на WASD или стрелках, пробел — рывок, P — пауза."></canvas>
             <div class="hud" id="hud" hidden><div class="hud-health"><span>ЖИЗНЬ <b id="health-text">100 / 100</b></span><div class="bar"><i id="health-bar"></i></div></div><div class="hud-center"><strong id="timer">00:00</strong><small>ДО РАССВЕТА 03:00</small></div><div class="hud-right"><span>УРОВЕНЬ <b id="level">1</b></span><span>ПОБЕЖДЕНО <b id="kills">0</b></span><button id="pause-button" aria-label="Приостановить игру"><svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M1 1h3v12H1zM8 1h3v12H8z"/></svg></button></div></div>
-            <div class="xp-hud" id="xp-hud" hidden><span>ОСКОЛКИ СВЕТА</span><div class="bar"><i id="xp-bar"></i></div><span id="dash-label">ПРОБЕЛ · РЫВОК ГОТОВ</span></div>
+            <div class="xp-hud" id="xp-hud" hidden><span id="xp-text">ОПЫТ 0 / 10</span><div class="bar"><i id="xp-bar"></i></div><span id="dash-label">ПРОБЕЛ · РЫВОК ГОТОВ</span></div>
             <div class="overlay" id="overlay">
-              <div class="welcome" id="welcome"><div class="sigil" aria-hidden="true"><span>✧</span></div><p class="eyebrow">СВЕТ ЕЩЁ НЕ ПОГАС</p><h2>Последний круг</h2><p class="overlay-copy">Двигайся. Собирай осколки. Становись сильнее.<br>Заклинания найдут врагов сами.</p><button class="primary" id="start-button">Войти в рощу <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button><div class="welcome-meta"><span>◷ 3 минуты</span><span>✧ Автомагия</span><span>↻ Новый забег</span></div></div>
+              <div class="welcome" id="welcome"><div class="sigil" aria-hidden="true"><span>✧</span></div><p class="eyebrow">СВЕТ ЕЩЁ НЕ ПОГАС</p><h2>Последний круг</h2><p class="overlay-copy">Бесконечный мир. Пятнадцать видов магии.<br>Выбери первое заклинание — стрелы уже с тобой.</p><label class="starter-label" for="starter-spell">ТВОЯ ПЕРВАЯ МАГИЯ</label><select id="starter-spell" class="starter-select" aria-label="Первое заклинание"></select><button class="primary" id="start-button">Войти в рощу <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button><div class="welcome-meta"><span>◷ 3 минуты</span><span>✧ 15 заклинаний</span><span>↻ Новый забег</span></div></div>
               <div class="dialog" id="pause-dialog" hidden><p class="eyebrow">МИР ПОДОЖДЁТ</p><h2>Тихий момент</h2><p class="overlay-copy">Соберись с мыслями. Свет всё ещё с тобой.</p><button class="primary" id="resume-button">Продолжить <span>→</span></button></div>
               <div class="upgrade-dialog" id="upgrade-dialog" hidden><p class="eyebrow">ТВОЯ МАГИЯ РАСТЁТ</p><h2>Выбери свой свет</h2><p class="overlay-copy">Одно усиление. Много новых возможностей.</p><div class="upgrade-grid" id="upgrade-choices"></div><p class="keyboard-hint">Выбор: клавиши 1, 2, 3 или нажатие на карточку</p></div>
               <div class="dialog" id="end-dialog" hidden><p class="eyebrow" id="end-eyebrow">ЕЩЁ ОДНА ИСКРА</p><h2 id="end-title">Свет вернётся</h2><p class="overlay-copy" id="end-copy"></p><div class="results"><div><strong id="result-time"></strong><span>ВРЕМЯ</span></div><div><strong id="result-kills"></strong><span>ПОБЕЖДЕНО</span></div><div><strong id="result-level"></strong><span>УРОВЕНЬ</span></div></div><button class="primary" id="restart-button">Ещё одна попытка <span>↻</span></button></div>
             </div>
+            <div id="unlock-toast" class="unlock-toast" role="status" hidden></div>
             <div class="touch-controls" id="touch-controls" hidden><div id="joystick" aria-label="Область управления движением"><div id="joystick-knob"></div></div><button id="touch-dash" aria-label="Рывок">↯</button></div>
           </div>
-          <div class="arena-bottom"><span><span class="status-dot"></span> МАГИЯ РАБОТАЕТ АВТОМАТИЧЕСКИ</span><span>ДОЖИВИ ДО РАССВЕТА <b>03:00</b></span></div>
+          <div class="arena-bottom"><span><span class="status-dot"></span> МАГИЯ РАБОТАЕТ АВТОМАТИЧЕСКИ</span><span>БЕСКОНЕЧНЫЙ МИР · РАССВЕТ <b>03:00</b></span></div>
         </section>
-        <aside class="sidebar"><section class="guide-card"><p class="eyebrow">ПОЛЕВЫЕ ЗАМЕТКИ</p><h3>Всё в твоих руках.</h3><div class="control-row"><div class="key-cluster"><kbd>W</kbd><span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div><p>Двигайся<small>или используй стрелки</small></p></div><div class="control-row"><kbd class="wide-key">SPACE</kbd><p>Рывок<small>сквозь опасность</small></p></div><div class="control-row"><kbd>P</kbd><p>Пауза<small>можно выдохнуть</small></p></div><p class="touch-tip">На телефоне: джойстик слева и рывок справа.</p></section><section class="guide-card shard-card"><span class="shard-icon">◆</span><p class="eyebrow">СОБИРАЙ ОСКОЛКИ</p><h3>Из искры — в бурю.</h3><p>Осколки побеждённых врагов дают опыт. Новый уровень — новое усиление магии.</p></section><section class="record-card"><span>ЛИЧНЫЙ РЕКОРД</span><strong id="record">00:00</strong><small id="record-caption">Каждая попытка — начало.</small></section></aside>
+        <aside class="sidebar"><section class="guide-card"><p class="eyebrow">ПОЛЕВЫЕ ЗАМЕТКИ</p><h3>Всё в твоих руках.</h3><div class="control-row"><div class="key-cluster"><kbd>W</kbd><span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div><p>Двигайся<small>или используй стрелки</small></p></div><div class="control-row"><kbd class="wide-key">SPACE</kbd><p>Рывок<small>сквозь опасность</small></p></div><div class="control-row"><kbd>P</kbd><p>Пауза<small>можно выдохнуть</small></p></div><p class="touch-tip">На телефоне: джойстик слева и рывок справа.</p></section><section class="guide-card grimoire-card"><p class="eyebrow">ТВОЙ ГРИМУАР</p><div id="active-spells" class="active-spells"></div><details><summary>Все 15 видов магии</summary><div id="spell-catalog" class="spell-catalog"></div></details></section><section class="guide-card cosmetics-card"><p class="eyebrow">КОЛЛЕКЦИЯ ОБЛИКОВ</p><h3>Мир меняется с тобой.</h3><label for="theme-select">Тема поля</label><select id="theme-select"></select><label for="skin-select">Облик врагов</label><select id="skin-select"></select><details><summary id="collection-count">Условия открытия</summary><ul id="unlock-list"></ul></details></section><section class="guide-card shard-card"><span class="shard-icon">◆</span><p class="eyebrow">СОБИРАЙ ОСКОЛКИ</p><h3>Из искры — в бурю.</h3><p>Осколки побеждённых врагов дают опыт. Каждый уровень требует больше опыта. Выбирай новую магию или усиливай изученную.</p></section><section class="record-card"><span>ЛИЧНЫЙ РЕКОРД</span><strong id="record">00:00</strong><small id="record-caption">Каждая попытка — начало.</small></section></aside>
       </div>
     </main>
     <footer><span>LUMEN <span class="footer-separator">/</span> Сделано из света и упрямства.</span><span>Без загрузок. Без аккаунта. Просто игра.</span></footer>
@@ -56,45 +64,70 @@ const HEIGHT = 680;
 const RUN_DURATION = 180;
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 const distance = (a, b) => Math.hypot(a.x - b.x, a.y - b.y);
-const xpRequired = level => 6 + level * 4;
+// 10, 15, 21, 28, 37…: experience, never elapsed time, awards levels.
+const xpRequired = level => Math.round(10 + 3.5 * (level - 1) + 1.1 * (level - 1) ** 1.8);
 const formatTime = seconds => `${Math.floor(seconds / 60).toString().padStart(2, '0')}:${Math.floor(seconds % 60).toString().padStart(2, '0')}`;
 function direction(x, y) {
   const length = Math.hypot(x, y);
   return length > 0 ? { x: x / length, y: y / length } : { x: 0, y: 0 };
 }
-const UPGRADES = [
-  { id: 'power', icon: '✦', name: 'Острая искра', description: 'Урон магических стрел увеличивается на 35%.', apply: p => { p.damage *= 1.35; } },
-  { id: 'haste', icon: 'ϟ', name: 'Быстрая мысль', description: 'Магические стрелы вылетают на 20% чаще.', apply: p => { p.fireInterval = Math.max(.12, p.fireInterval * .8); } },
-  { id: 'multishot', icon: '⋔', name: 'Созвездие', description: 'Ещё одна стрела в каждом залпе. Больше света!', available: p => p.shots < 5, apply: p => { p.shots += 1; } },
-  { id: 'nova', icon: '◎', name: 'Лунная волна', description: 'Круговой взрыв вокруг тебя. Повторный выбор усиливает его.', apply: p => { p.nova += 1; } },
-  { id: 'orbit', icon: '◈', name: 'Маленькая луна', description: 'Вокруг тебя вращается защитный огонёк. До четырёх лун.', available: p => p.orbits < 4, apply: p => { p.orbits += 1; } },
-  { id: 'speed', icon: '»', name: 'Лёгкий шаг', description: 'Скорость движения +15%. Рывок восстанавливается быстрее.', apply: p => { p.speed *= 1.15; p.dashInterval = Math.max(1.5, p.dashInterval * .85); } },
-  { id: 'magnet', icon: '◇', name: 'Притяжение', description: 'Собирай осколки с большего расстояния: радиус +45%.', apply: p => { p.magnet *= 1.45; } },
-  { id: 'vitality', icon: '♡', name: 'Тёплый свет', description: '+25 к максимальному здоровью и восстановление 45 здоровья.', apply: p => { p.maxHp += 25; p.hp = Math.min(p.maxHp, p.hp + 45); } },
-  { id: 'regen', icon: '✳', name: 'Второе дыхание', description: 'Восстанавливай 1,5 здоровья каждую секунду.', apply: p => { p.regen += 1.5; } },
+function segmentDistance(point, a, b) {
+  const dx = b.x - a.x, dy = b.y - a.y;
+  const t = clamp(((point.x - a.x) * dx + (point.y - a.y) * dy) / (dx * dx + dy * dy || 1), 0, 1);
+  return Math.hypot(point.x - a.x - dx * t, point.y - a.y - dy * t);
+}
+const SPELLS = [
+  { id: 'spark', icon: '✦', name: 'Магические стрелы', color: '#d4f793', description: 'Автоматические стрелы находят ближайших врагов.', max: 1 },
+  { id: 'nova', icon: '◎', name: 'Лунная волна', color: '#aeddff', description: 'Взрыв вокруг мага. Ранг увеличивает урон и радиус.', cooldown: 3.5, max: 5 },
+  { id: 'orbit', icon: '◈', name: 'Маленькие луны', color: '#b2ffe7', description: 'Вращающиеся огоньки режут врагов. Каждый ранг добавляет луну.', max: 4 },
+  { id: 'fireball', icon: '●', name: 'Огненный шар', color: '#ffb477', description: 'Снаряд взрывается при попадании и задевает целую группу.', cooldown: 2, max: 5 },
+  { id: 'frost', icon: '❄', name: 'Кольцо мороза', color: '#91dcff', description: 'Ледяная волна ранит и замедляет ближайших врагов на 2,5 секунды.', cooldown: 4.5, max: 5 },
+  { id: 'lightning', icon: 'ϟ', name: 'Цепная молния', color: '#f5e891', description: 'Разряд перескакивает между врагами. Ранг добавляет цели.', cooldown: 2.8, max: 5 },
+  { id: 'meteor', icon: '☄', name: 'Метеорит', color: '#ff907a', description: 'Отмечает место под врагом и через 0,8 секунды обрушивает метеор.', cooldown: 4.5, max: 5 },
+  { id: 'poison', icon: '♧', name: 'Ядовитый сад', color: '#b8ec7e', description: 'Создаёт под врагами облако, которое наносит урон 5 секунд.', cooldown: 4, max: 5 },
+  { id: 'blades', icon: '✳', name: 'Веер клинков', color: '#dfd9ff', description: 'Восемь и более клинков летят во все стороны, пробивая врагов.', cooldown: 3.2, max: 5 },
+  { id: 'beam', icon: '╱', name: 'Солнечный луч', color: '#fff0ac', description: 'Пронизывает всех врагов на длинной линии перед ближайшей целью.', cooldown: 2.6, max: 5 },
+  { id: 'void', icon: '◉', name: 'Чёрная дыра', color: '#bb9bff', description: 'Стягивает врагов в одну точку и постепенно истощает их.', cooldown: 5, max: 5 },
+  { id: 'storm', icon: '☁', name: 'Грозовое облако', color: '#bdd1ff', description: 'Облако три секунды бьёт разрядами по случайным врагам под ним.', cooldown: 4.5, max: 5 },
+  { id: 'boomerang', icon: '☽', name: 'Возвратный серп', color: '#e9c0ff', description: 'Пробивает врагов по пути туда и обратно, возвращаясь к магу.', cooldown: 2.4, max: 5 },
+  { id: 'runes', icon: '◇', name: 'Рунные ловушки', color: '#ffd6a0', description: 'Оставляет под ногами руну. Враг активирует мощный взрыв.', cooldown: 2.8, max: 5 },
+  { id: 'familiar', icon: '✧', name: 'Звёздный спутник', color: '#9ff4ea', description: 'Маленький спутник летает рядом и самостоятельно стреляет по врагам.', cooldown: .85, max: 5 },
 ];
-
-function createGame() {
+const UPGRADES = [
+  ...SPELLS.filter(s => s.id !== 'spark').map(s => ({ ...s, spell: true, available: p => p.magic[s.id] < s.max, apply: p => { p.magic[s.id]++; } })),
+  { id: 'power', icon: '✦', name: 'Сила магии', description: 'Урон всех заклинаний +25%.', apply: p => { p.damage *= 1.25; } },
+  { id: 'haste', icon: 'ϟ', name: 'Быстрая мысль', description: 'Все заклинания перезаряжаются на 15% быстрее.', available: p => p.castRate > .3, apply: p => { p.castRate = Math.max(.3, p.castRate * .85); } },
+  { id: 'multishot', icon: '⋔', name: 'Созвездие', description: 'Ещё одна магическая стрела в каждом залпе.', available: p => p.shots < 5, apply: p => { p.shots++; } },
+  { id: 'speed', icon: '»', name: 'Лёгкий шаг', description: 'Скорость +12%, восстановление рывка быстрее на 15%.', available: p => p.speed < 350, apply: p => { p.speed *= 1.12; p.dashInterval = Math.max(1.5, p.dashInterval * .85); } },
+  { id: 'magnet', icon: '◇', name: 'Притяжение', description: 'Радиус сбора осколков +40%.', available: p => p.magnet < 400, apply: p => { p.magnet *= 1.4; } },
+  { id: 'vitality', icon: '♡', name: 'Тёплый свет', description: '+25 к максимуму здоровья, восстановление 45 здоровья.', apply: p => { p.maxHp += 25; p.hp = Math.min(p.maxHp, p.hp + 45); } },
+  { id: 'regen', icon: '✳', name: 'Второе дыхание', description: 'Восстанавливай дополнительно 1,5 здоровья в секунду.', apply: p => { p.regen += 1.5; } },
+];
+function createGame(starter = 'spark') {
+  const magic = Object.fromEntries(SPELLS.map(s => [s.id, s.id === 'spark' ? 1 : 0]));
+  if (Object.hasOwn(magic, starter)) magic[starter] = 1;
   return {
-    state: 'playing', time: 0, kills: 0, level: 1, xp: 0, nextId: 1,
-    spawnTimer: .8, fireTimer: .2, novaTimer: 3, enemies: [], bullets: [], gems: [], particles: [], rings: [], choices: [],
-    player: { x: WIDTH / 2, y: HEIGHT / 2, radius: 13, hp: 100, maxHp: 100, speed: 190, damage: 25, fireInterval: .65, shots: 1, magnet: 90, nova: 0, orbits: 0, regen: 0, invincible: 0, dashCooldown: 0, dashTime: 0, dashInterval: 4, facing: { x: 0, y: -1 }, dashDirection: { x: 0, y: -1 } },
+    state: 'playing', time: 0, kills: 0, level: 1, xp: 0, nextId: 1, reportedKills: 0, reportedWin: false,
+    spawnTimer: .8, fireTimer: .2, spellTimers: {}, enemies: [], bullets: [], gems: [], particles: [], effects: [], zones: [], choices: [],
+    player: { x: 0, y: 0, radius: 13, hp: 100, maxHp: 100, speed: 190, damage: 25, fireInterval: .65, castRate: 1, shots: 1, magnet: 110, magic, regen: 0, invincible: 0, dashCooldown: 0, dashTime: 0, dashInterval: 4, facing: { x: 0, y: -1 }, dashDirection: { x: 0, y: -1 } },
   };
 }
-
 function chooseUpgrades(player, random = Math.random) {
   const pool = UPGRADES.filter(u => !u.available || u.available(player));
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
-  return pool.slice(0, 3);
+  const fresh = pool.filter(u => u.spell && !player.magic[u.id]);
+  const learned = pool.filter(u => u.spell && player.magic[u.id]);
+  const passive = pool.filter(u => !u.spell);
+  // Offer discovery, improvement and a passive whenever all are available.
+  return [...new Set([fresh[0], learned[0] || fresh[1], passive[0], ...pool].filter(Boolean))].slice(0, 3);
 }
-
 function checkLevel(game, random) {
   if (game.xp < xpRequired(game.level)) return;
   game.xp -= xpRequired(game.level);
-  game.level += 1;
+  game.level++;
   game.player.hp = Math.min(game.player.maxHp, game.player.hp + 8);
   game.state = 'upgrade';
   game.choices = chooseUpgrades(game.player, random);
@@ -109,7 +142,6 @@ function selectUpgrade(game, id, random = Math.random) {
   checkLevel(game, random);
   return true;
 }
-
 function dash(game) {
   const p = game.player;
   if (game.state !== 'playing' || p.dashCooldown > 0) return false;
@@ -119,25 +151,22 @@ function dash(game) {
   p.dashDirection = { ...p.facing };
   return true;
 }
-
 function spawnEnemy(game, random = Math.random) {
-  const side = Math.floor(random() * 4);
-  let x = random() * WIDTH, y = random() * HEIGHT;
-  if (side === 0) x = -25;
-  if (side === 1) x = WIDTH + 25;
-  if (side === 2) y = -25;
-  if (side === 3) y = HEIGHT + 25;
+  const p = game.player, side = Math.floor(random() * 4);
+  let x = p.x + (random() - .5) * WIDTH, y = p.y + (random() - .5) * HEIGHT;
+  if (side === 0) x = p.x - WIDTH / 2 - 40;
+  if (side === 1) x = p.x + WIDTH / 2 + 40;
+  if (side === 2) y = p.y - HEIGHT / 2 - 40;
+  if (side === 3) y = p.y + HEIGHT / 2 + 40;
   const roll = random();
   const type = game.time > 70 && roll < .2 ? 'brute' : game.time > 25 && roll < .4 ? 'wisp' : 'shade';
-  const stats = { shade: [30, 47, 13, 10, 2], wisp: [20, 87, 10, 8, 2], brute: [100, 33, 22, 20, 5] }[type];
-  const scale = 1 + game.time / 160;
-  const enemy = { id: game.nextId++, x, y, type, hp: stats[0] * scale, maxHp: stats[0] * scale, speed: stats[1] * (1 + game.time / 450), radius: stats[2], damage: stats[3], xp: stats[4], hit: 0, orbitCooldown: 0, phase: random() * Math.PI * 2 };
+  const stats = { shade: [30, 55, 13, 10, 2], wisp: [20, 98, 10, 8, 2], brute: [100, 40, 22, 20, 5] }[type];
+  const scale = 1 + game.time / 180;
+  const enemy = { id: game.nextId++, x, y, type, hp: stats[0] * scale, maxHp: stats[0] * scale, speed: stats[1] * (1 + game.time / 400), radius: stats[2], damage: stats[3], xp: stats[4], hit: 0, orbitCooldown: 0, slow: 0, phase: random() * Math.PI * 2 };
   game.enemies.push(enemy);
   return enemy;
 }
-
 function burst(game, x, y, color, count = 8) {
-  // Deterministic cosmetic particles keep gameplay randomness independent.
   for (let i = 0; i < count; i++) {
     const angle = (i / count) * Math.PI * 2 + game.time;
     game.particles.push({ x, y, vx: Math.cos(angle) * (35 + i * 7), vy: Math.sin(angle) * (35 + i * 7), life: .45, maxLife: .45, color });
@@ -148,18 +177,131 @@ function hitEnemy(game, enemy, damage) {
   enemy.hp -= damage;
   enemy.hit = .12;
   if (enemy.hp <= 0) {
-    game.kills += 1;
+    game.kills++;
     game.gems.push({ x: enemy.x, y: enemy.y, value: enemy.xp });
-    burst(game, enemy.x, enemy.y, enemy.type === 'brute' ? '#e5a58f' : '#a8d5c5');
+    burst(game, enemy.x, enemy.y, '#a8d5c5');
   }
 }
+function effect(game, kind, at, options = {}) {
+  const life = options.life ?? .4;
+  game.effects.push({ kind, x: at.x, y: at.y, radius: 80, color: '#d4f793', ...options, life, maxLife: life });
+}
+function areaHit(game, at, radius, damage, color, slow = 0) {
+  for (const e of game.enemies) if (e.hp > 0 && distance(at, e) < radius + e.radius) {
+    hitEnemy(game, e, damage);
+    e.slow = Math.max(e.slow, slow);
+  }
+  effect(game, 'ring', at, { radius, color });
+}
+function projectile(game, at, aim, options = {}) {
+  game.bullets.push({ x: at.x, y: at.y, vx: aim.x * 480, vy: aim.y * 480, life: 2.6, age: 0, damage: game.player.damage, radius: 5, kind: 'spark', color: '#d4f793', pierce: 1, hits: new Set(), ...options });
+}
 function orbitPositions(game) {
-  return Array.from({ length: game.player.orbits }, (_, i) => {
-    const angle = game.time * 2.6 + i * Math.PI * 2 / game.player.orbits;
+  const count = game.player.magic.orbit;
+  return Array.from({ length: count }, (_, i) => {
+    const angle = game.time * 2.6 + i * Math.PI * 2 / count;
     return { x: game.player.x + Math.cos(angle) * 69, y: game.player.y + Math.sin(angle) * 69 };
   });
 }
-
+function familiarPosition(game) {
+  return { x: game.player.x + Math.cos(game.time * 1.5) * 42, y: game.player.y + Math.sin(game.time * 1.5) * 42 };
+}
+function castSpell(game, spell, rank, target, random) {
+  const p = game.player, scale = p.damage / 25, color = spell.color;
+  const aim = target ? direction(target.x - p.x, target.y - p.y) : p.facing;
+  const at = target || p;
+  switch (spell.id) {
+    case 'nova': areaHit(game, p, 115 + rank * 18, 35 * rank * scale, color); break;
+    case 'frost': areaHit(game, p, 150 + rank * 20, (12 + rank * 10) * scale, color, 2.5); break;
+    case 'fireball': projectile(game, p, aim, { kind: 'fireball', radius: 9, color, damage: (30 + rank * 14) * scale, blast: 65 + rank * 8 }); break;
+    case 'lightning': {
+      let from = p, next = target;
+      const visited = new Set();
+      for (let i = 0; i < 2 + rank && next; i++) {
+        effect(game, 'bolt', from, { x2: next.x, y2: next.y, color, life: .25 });
+        hitEnemy(game, next, (30 + rank * 12) * scale);
+        visited.add(next.id); from = next;
+        next = game.enemies.filter(e => e.hp > 0 && !visited.has(e.id) && distance(from, e) < 230).sort((a, b) => distance(from, a) - distance(from, b))[0];
+      }
+      break;
+    }
+    case 'blades':
+      for (let i = 0; i < 6 + rank * 2; i++) {
+        const angle = i * Math.PI * 2 / (6 + rank * 2) + game.time;
+        projectile(game, p, { x: Math.cos(angle), y: Math.sin(angle) }, { kind: 'blade', color, damage: (18 + rank * 8) * scale, pierce: 3, life: 1.3 });
+      }
+      break;
+    case 'beam': {
+      const end = { x: p.x + aim.x * 680, y: p.y + aim.y * 680 };
+      for (const e of game.enemies) if (segmentDistance(e, p, end) < e.radius + 10 + rank * 2) hitEnemy(game, e, (40 + rank * 16) * scale);
+      effect(game, 'beam', p, { x2: end.x, y2: end.y, color, radius: 10 + rank * 2, life: .35 });
+      break;
+    }
+    case 'boomerang': projectile(game, p, aim, { kind: 'boomerang', color, damage: (24 + rank * 9) * scale, pierce: Infinity, radius: 12, life: 3 }); break;
+    case 'familiar': {
+      const origin = familiarPosition(game);
+      projectile(game, origin, direction(at.x - origin.x, at.y - origin.y), { kind: 'familiar', color, damage: (15 + rank * 8) * scale });
+      break;
+    }
+    default: {
+      const config = {
+        meteor: { radius: 75 + rank * 12, damage: (80 + rank * 25) * scale, life: .8 },
+        poison: { radius: 90 + rank * 10, damage: (6 + rank * 5) * scale, life: 5, interval: .5 },
+        void: { radius: 125 + rank * 12, damage: (4 + rank * 3) * scale, life: 3.5, interval: .3 },
+        storm: { radius: 125 + rank * 10, damage: (20 + rank * 10) * scale, life: 3, interval: .35 },
+        runes: { radius: 85 + rank * 10, damage: (60 + rank * 22) * scale, life: 12 },
+      }[spell.id];
+      if (config) game.zones.push({ kind: spell.id, x: spell.id === 'runes' ? p.x : at.x, y: spell.id === 'runes' ? p.y : at.y, color, tick: 0, age: 0, ...config });
+    }
+  }
+}
+function updateZones(game, dt, random) {
+  for (const zone of game.zones) {
+    zone.life -= dt; zone.age += dt; zone.tick -= dt;
+    const inside = game.enemies.filter(e => e.hp > 0 && distance(zone, e) < zone.radius + e.radius);
+    if (zone.kind === 'meteor') {
+      if (zone.life <= 0) { areaHit(game, zone, zone.radius, zone.damage, zone.color); effect(game, 'meteor', zone, { color: zone.color, radius: zone.radius, life: .5 }); }
+    } else if (zone.kind === 'runes') {
+      if (zone.age > .7 && inside.some(e => distance(zone, e) < 45 + e.radius)) {
+        areaHit(game, zone, zone.radius, zone.damage, zone.color); zone.life = 0;
+      }
+    } else {
+      if (zone.kind === 'void') for (const e of inside) {
+        const d = distance(zone, e), aim = direction(zone.x - e.x, zone.y - e.y);
+        e.x += aim.x * Math.min(d, 115 * dt); e.y += aim.y * Math.min(d, 115 * dt);
+      }
+      if (zone.tick <= 0) {
+        if (zone.kind === 'storm' && inside.length) {
+          const e = inside[Math.floor(random() * inside.length)];
+          hitEnemy(game, e, zone.damage); effect(game, 'bolt', { x: zone.x, y: zone.y - 45 }, { x2: e.x, y2: e.y, color: zone.color, life: .18 });
+        } else if (zone.kind !== 'storm') for (const e of inside) hitEnemy(game, e, zone.damage);
+        zone.tick = zone.interval;
+      }
+    }
+  }
+  game.zones = game.zones.filter(z => z.life > 0);
+}
+function updateBullets(game, dt) {
+  for (const b of game.bullets) {
+    const previous = { x: b.x, y: b.y };
+    b.age += dt; b.life -= dt;
+    if (b.kind === 'boomerang' && b.age > .65) {
+      if (!b.returning) { b.returning = true; b.hits.clear(); }
+      const aim = direction(game.player.x - b.x, game.player.y - b.y);
+      b.vx = aim.x * 570; b.vy = aim.y * 570;
+    }
+    b.x += b.vx * dt; b.y += b.vy * dt;
+    for (const e of game.enemies) if (e.hp > 0 && !b.hits.has(e.id) && segmentDistance(e, previous, b) < e.radius + b.radius) {
+      b.hits.add(e.id);
+      if (b.blast) areaHit(game, b, b.blast, b.damage, b.color);
+      else hitEnemy(game, e, b.damage);
+      b.pierce--;
+      if (b.pierce <= 0) { b.life = 0; break; }
+    }
+    if (b.returning && segmentDistance(game.player, previous, b) < 14) b.life = 0;
+  }
+  game.bullets = game.bullets.filter(b => b.life > 0);
+}
 function update(game, input, dt, random = Math.random) {
   if (game.state !== 'playing') return;
   dt = clamp(dt, 0, .05);
@@ -173,85 +315,94 @@ function update(game, input, dt, random = Math.random) {
   if (movement.x || movement.y) p.facing = movement;
   const moving = p.dashTime > 0 ? p.dashDirection : movement;
   const speed = p.speed * (p.dashTime > 0 ? 4 : 1);
-  p.x = clamp(p.x + moving.x * speed * dt, 20, WIDTH - 20);
-  p.y = clamp(p.y + moving.y * speed * dt, 65, HEIGHT - 38);
+  // World coordinates have no bounds. The renderer keeps the camera on the mage.
+  p.x += moving.x * speed * dt; p.y += moving.y * speed * dt;
   if (p.dashTime > 0) burst(game, p.x, p.y, '#bcecad', 1);
   p.dashTime = Math.max(0, p.dashTime - dt);
   game.spawnTimer -= dt;
   if (game.spawnTimer <= 0) {
-    const count = 1 + Math.floor(game.time / 45);
-    for (let i = 0; i < count && game.enemies.length < 180; i++) spawnEnemy(game, random);
-    game.spawnTimer = Math.max(.3, 1.15 - game.time * .004);
+    for (let i = 0; i < 1 + Math.floor(game.time / 45) && game.enemies.length < 180; i++) spawnEnemy(game, random);
+    game.spawnTimer = Math.max(.3, 1.05 - game.time * .004);
   }
+  const targets = game.enemies.filter(e => e.hp > 0).sort((a, b) => distance(p, a) - distance(p, b));
   game.fireTimer -= dt;
-  if (game.fireTimer <= 0 && game.enemies.length) {
-    const targets = [...game.enemies].sort((a, b) => distance(p, a) - distance(p, b));
+  if (game.fireTimer <= 0 && targets.length) {
     for (let i = 0; i < p.shots; i++) {
-      const target = targets[i % targets.length];
-      const aim = direction(target.x - p.x, target.y - p.y);
-      const angle = Math.atan2(aim.y, aim.x) + (i >= targets.length ? (i % 2 ? .09 : -.09) : 0);
-      game.bullets.push({ x: p.x, y: p.y, vx: Math.cos(angle) * 480, vy: Math.sin(angle) * 480, life: 2.6, damage: p.damage });
+      const target = targets[i % targets.length], aim = direction(target.x - p.x, target.y - p.y);
+      projectile(game, p, aim);
     }
-    game.fireTimer = p.fireInterval;
+    game.fireTimer = p.fireInterval * p.castRate;
   }
-  game.novaTimer -= dt;
-  if (p.nova > 0 && game.novaTimer <= 0) {
-    const radius = 115 + p.nova * 14;
-    game.rings.push({ x: p.x, y: p.y, radius, life: .5 });
-    for (const enemy of game.enemies) if (distance(p, enemy) < radius + enemy.radius) hitEnemy(game, enemy, 35 * p.nova);
-    game.novaTimer = 3.5;
+  for (const spell of SPELLS) if (p.magic[spell.id] && spell.cooldown) {
+    game.spellTimers[spell.id] = (game.spellTimers[spell.id] ?? .3) - dt;
+    if (game.spellTimers[spell.id] <= 0 && (targets.length || spell.id === 'runes')) {
+      castSpell(game, spell, p.magic[spell.id], targets.find(e => e.hp > 0), random);
+      game.spellTimers[spell.id] = spell.cooldown * p.castRate;
+    }
   }
+  updateZones(game, dt, random); updateBullets(game, dt);
   const orbits = orbitPositions(game);
-  for (const enemy of game.enemies) {
-    if (enemy.hp <= 0) continue;
-    enemy.hit = Math.max(0, enemy.hit - dt);
-    enemy.orbitCooldown = Math.max(0, enemy.orbitCooldown - dt);
-    const aim = direction(p.x - enemy.x, p.y - enemy.y);
-    enemy.x += aim.x * enemy.speed * dt;
-    enemy.y += aim.y * enemy.speed * dt;
-    if (enemy.orbitCooldown <= 0 && orbits.some(o => distance(o, enemy) < enemy.radius + 11)) {
-      hitEnemy(game, enemy, 24 + p.damage * .4);
-      enemy.orbitCooldown = .45;
+  for (const e of game.enemies) {
+    if (e.hp <= 0) continue;
+    e.hit = Math.max(0, e.hit - dt); e.orbitCooldown = Math.max(0, e.orbitCooldown - dt); e.slow = Math.max(0, e.slow - dt);
+    const aim = direction(p.x - e.x, p.y - e.y), speed = e.speed * (e.slow > 0 ? .35 : 1);
+    e.x += aim.x * speed * dt; e.y += aim.y * speed * dt;
+    if (e.orbitCooldown <= 0 && orbits.some(o => distance(o, e) < e.radius + 11)) {
+      hitEnemy(game, e, (24 + p.magic.orbit * 8) * p.damage / 25); e.orbitCooldown = .45;
     }
-    if (enemy.hp > 0 && p.invincible <= 0 && distance(p, enemy) < p.radius + enemy.radius) {
-      p.hp = Math.max(0, p.hp - enemy.damage);
-      p.invincible = .75;
-      enemy.x -= aim.x * 22;
-      enemy.y -= aim.y * 22;
-      burst(game, p.x, p.y, '#f4a08f', 12);
+    if (e.hp > 0 && p.invincible <= 0 && distance(p, e) < p.radius + e.radius) {
+      p.hp = Math.max(0, p.hp - e.damage); p.invincible = .75;
+      e.x -= aim.x * 22; e.y -= aim.y * 22; burst(game, p.x, p.y, '#f4a08f', 12);
       if (p.hp <= 0) { game.state = 'lost'; return; }
     }
   }
-  for (const bullet of game.bullets) {
-    bullet.x += bullet.vx * dt;
-    bullet.y += bullet.vy * dt;
-    bullet.life -= dt;
-    for (const enemy of game.enemies) {
-      if (enemy.hp > 0 && distance(bullet, enemy) < enemy.radius + 6) {
-        hitEnemy(game, enemy, bullet.damage);
-        bullet.life = 0;
-        break;
-      }
-    }
-  }
-  game.enemies = game.enemies.filter(e => e.hp > 0);
-  game.bullets = game.bullets.filter(b => b.life > 0 && b.x > -40 && b.x < WIDTH + 40 && b.y > -40 && b.y < HEIGHT + 40);
+  // Discard entities left far behind, so travelling never grows memory without bound.
+  game.enemies = game.enemies.filter(e => e.hp > 0 && distance(p, e) < Math.max(WIDTH, HEIGHT) * 2.5);
   game.gems = game.gems.filter(gem => {
     const d = distance(p, gem);
     if (d < p.radius + 10) { game.xp += gem.value; return false; }
+    if (d > 4000) return false;
     if (d < p.magnet) {
-      const aim = direction(p.x - gem.x, p.y - gem.y);
-      const step = Math.min(d, (200 + (p.magnet - d) * 3) * dt);
-      gem.x += aim.x * step;
-      gem.y += aim.y * step;
+      const aim = direction(p.x - gem.x, p.y - gem.y), step = Math.min(d, (200 + (p.magnet - d) * 3) * dt);
+      gem.x += aim.x * step; gem.y += aim.y * step;
     }
     return true;
-  });
+  }).slice(-2000);
   for (const particle of game.particles) { particle.x += particle.vx * dt; particle.y += particle.vy * dt; particle.life -= dt; }
   game.particles = game.particles.filter(particle => particle.life > 0).slice(-350);
-  for (const ring of game.rings) ring.life -= dt;
-  game.rings = game.rings.filter(ring => ring.life > 0);
+  for (const e of game.effects) e.life -= dt;
+  game.effects = game.effects.filter(e => e.life > 0).slice(-150);
   checkLevel(game, random);
+}
+
+const THEMES = [
+  { id: 'grove', name: 'Сумеречная роща', requirement: 'Доступна сразу', unlocked: () => true, ground: '#14282b', grid: '#779f7912', detail: '#35514b', light: '#bedc8f', accent: '#d4f793' },
+  { id: 'frost', name: 'Ледяные пустоши', requirement: 'Выживи 60 секунд', unlocked: p => p.bestTime >= 60, ground: '#182939', grid: '#abdfff16', detail: '#50748b', light: '#b3eeff', accent: '#a5dfff' },
+  { id: 'embers', name: 'Пепельные земли', requirement: 'Победи 100 врагов всего', unlocked: p => p.totalKills >= 100, ground: '#2c1b22', grid: '#ff9a6514', detail: '#67423a', light: '#ffa66b', accent: '#ffc28f' },
+  { id: 'astral', name: 'Астральный сад', requirement: 'Встреть рассвет: 1 победа', unlocked: p => p.wins >= 1, ground: '#201b35', grid: '#bc9cff18', detail: '#594a7e', light: '#d4b6ff', accent: '#dfc5ff' },
+];
+const SKINS = [
+  { id: 'shades', name: 'Тени', requirement: 'Доступны сразу', unlocked: () => true, body: '#546d69', heavy: '#836d66', face: '#20373b', eye: '#b7e7d0' },
+  { id: 'crystals', name: 'Кристаллы', requirement: 'Достигни 5-го уровня', unlocked: p => p.bestLevel >= 5, body: '#7cacd1', heavy: '#898ac7', face: '#354567', eye: '#e3f9ff' },
+  { id: 'cinders', name: 'Угольки', requirement: 'Победи 250 врагов всего', unlocked: p => p.totalKills >= 250, body: '#b77554', heavy: '#ad504d', face: '#422632', eye: '#ffe1a3' },
+  { id: 'masks', name: 'Древние маски', requirement: 'Изучи 6 видов магии за забег', unlocked: p => p.mostMagic >= 6, body: '#b9b497', heavy: '#a39771', face: '#393f38', eye: '#e7ffb5' },
+];
+function createProgress(saved = {}) {
+  const p = { totalKills: 0, bestTime: 0, bestLevel: 1, wins: 0, mostMagic: 1, theme: 'grove', skin: 'shades' };
+  if (!saved || typeof saved !== 'object') return p;
+  for (const key of ['totalKills', 'bestTime', 'bestLevel', 'wins', 'mostMagic']) if (Number.isFinite(saved[key]) && saved[key] >= 0) p[key] = saved[key];
+  for (const [key, catalog] of [['theme', THEMES], ['skin', SKINS]]) if (catalog.some(item => item.id === saved[key] && item.unlocked(p))) p[key] = saved[key];
+  return p;
+}
+function recordProgress(progress, game) {
+  const catalog = [...THEMES, ...SKINS], before = new Set(catalog.filter(item => item.unlocked(progress)));
+  progress.totalKills += Math.max(0, game.kills - game.reportedKills);
+  game.reportedKills = game.kills;
+  progress.bestTime = Math.max(progress.bestTime, game.time);
+  progress.bestLevel = Math.max(progress.bestLevel, game.level);
+  progress.mostMagic = Math.max(progress.mostMagic, Object.values(game.player.magic).filter(rank => rank > 0).length);
+  if (game.state === 'won' && !game.reportedWin) { progress.wins++; game.reportedWin = true; }
+  return catalog.filter(item => item.unlocked(progress) && !before.has(item)).map(item => item.name);
 }
 
 
@@ -269,7 +420,62 @@ const keys = new Set();
 const touch = { x: 0, y: 0, active: false, id: null };
 const isTouch = matchMedia('(pointer: coarse)').matches || navigator.maxTouchPoints > 0;
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const scenery = Array.from({ length: 100 }, (_, i) => ({ x: ((i * 173.3 + 73) % WIDTH), y: ((i * 93.7 + 29) % HEIGHT), size: 1 + i % 4, phase: i * 1.9 }));
+let progress = createProgress({ bestTime: record.time, totalKills: record.kills });
+try { progress = createProgress(JSON.parse(localStorage.getItem('lumen-progress')) || progress); } catch { /* Keep session progress when storage is blocked. */ }
+let theme = THEMES.find(t => t.id === progress.theme), skin = SKINS.find(s => s.id === progress.skin);
+let toastUntil = 0, saveTimer = 0;
+function saveProgress() { try { localStorage.setItem('lumen-progress', JSON.stringify(progress)); } catch { /* Optional persistence. */ } }
+function applyLook() {
+  theme = THEMES.find(t => t.id === progress.theme); skin = SKINS.find(s => s.id === progress.skin);
+  document.documentElement.style.setProperty('--lime', theme.accent);
+  $('field-name').textContent = theme.name.toUpperCase();
+}
+function renderCollection() {
+  for (const [id, catalog, key] of [['theme-select', THEMES, 'theme'], ['skin-select', SKINS, 'skin']]) {
+    $(id).replaceChildren(...catalog.map(item => {
+      const option = document.createElement('option'); option.value = item.id;
+      option.textContent = item.unlocked(progress) ? item.name : `${item.name} · закрыто`;
+      option.disabled = !item.unlocked(progress); option.selected = item.id === progress[key]; return option;
+    }));
+  }
+  const catalog = [...THEMES, ...SKINS];
+  $('collection-count').textContent = `Открыто ${catalog.filter(item => item.unlocked(progress)).length} / ${catalog.length} · условия`;
+  $('unlock-list').replaceChildren(...catalog.map(item => {
+    const li = document.createElement('li'); li.className = item.unlocked(progress) ? 'earned' : '';
+    li.textContent = `${item.unlocked(progress) ? '✓' : '○'} ${item.name}: ${item.requirement}`; return li;
+  }));
+}
+function syncProgress() {
+  const unlocked = recordProgress(progress, game);
+  if (unlocked.length) {
+    $('unlock-toast').textContent = `Открыто: ${unlocked.join(' · ')}. Выбери в коллекции!`;
+    $('unlock-toast').hidden = false; toastUntil = ambientTime + 5; renderCollection();
+  }
+  saveProgress();
+}
+for (const [id, key, catalog] of [['theme-select', 'theme', THEMES], ['skin-select', 'skin', SKINS]]) {
+  $(id).addEventListener('change', event => {
+    pause();
+    const item = catalog.find(item => item.id === event.target.value);
+    if (item?.unlocked(progress)) { progress[key] = item.id; applyLook(); saveProgress(); }
+  });
+}
+$('starter-spell').replaceChildren(...SPELLS.filter(spell => spell.id !== 'spark').map(spell => {
+  const option = document.createElement('option'); option.value = spell.id; option.textContent = spell.name; return option;
+}));
+$('starter-spell').value = 'fireball';
+$('spell-catalog').replaceChildren(...SPELLS.map(spell => {
+  const row = document.createElement('div'); row.className = 'spell-entry';
+  row.innerHTML = `<strong style="color:${spell.color}">${spell.icon} ${spell.name}</strong><p>${spell.description}</p>`; return row;
+}));
+function renderLoadout() {
+  $('active-spells').replaceChildren(...SPELLS.filter(s => game.player.magic[s.id]).map(spell => {
+    const badge = document.createElement('span'); badge.className = 'spell-badge'; badge.style.color = spell.color;
+    badge.title = `${spell.name} · ранг ${game.player.magic[spell.id]}: ${spell.description}`;
+    badge.innerHTML = `${spell.icon}<small>${game.player.magic[spell.id]}</small>`; badge.setAttribute('aria-label', badge.title); return badge;
+  }));
+}
+renderCollection(); applyLook();
 
 function refreshRecord() { $('record').textContent = formatTime(record.time); $('record-caption').textContent = record.kills ? `${record.kills} врагов побеждено в лучшем забеге.` : 'Каждая попытка — начало.'; }
 refreshRecord();
@@ -285,11 +491,11 @@ function tone(frequency, duration = .08, volume = .04) {
   } catch { /* Sound is optional. */ }
 }
 function clearInput() { keys.clear(); touch.x = 0; touch.y = 0; touch.active = false; touch.id = null; $('joystick-knob').style.transform = ''; }
-function start() { clearInput(); game = createGame(); previousState = ''; previousLevel = 0; tone(392, .2); syncUI(); canvas.focus({ preventScroll: true }); }
+function start() { clearInput(); game = createGame($('starter-spell').value); previousState = ''; previousLevel = 0; tone(392, .2); syncUI(); canvas.focus({ preventScroll: true }); }
 function pause() { if (game.state === 'playing') { game.state = 'paused'; clearInput(); syncUI(); } }
 function resume() { if (game.state === 'paused') { game.state = 'playing'; syncUI(); canvas.focus({ preventScroll: true }); } }
 function doDash() { if (dash(game)) tone(165, .14, .06); }
-function choose(index) { const choice = game.choices[index]; if (choice && selectUpgrade(game, choice.id)) { tone(660, .2); syncUI(); if (game.state === 'playing') canvas.focus({ preventScroll: true }); } }
+function choose(index) { const choice = game.choices[index]; if (choice && selectUpgrade(game, choice.id)) { renderLoadout(); syncProgress(); tone(660, .2); syncUI(); if (game.state === 'playing') canvas.focus({ preventScroll: true }); } }
 $('start-button').addEventListener('click', start);
 $('restart-button').addEventListener('click', start);
 $('pause-button').addEventListener('click', pause);
@@ -303,6 +509,7 @@ $('sound-button').addEventListener('click', () => {
   if (audioContext?.state === 'suspended') audioContext.resume().catch(() => {});
 });
 document.addEventListener('keydown', event => {
+  if (['SELECT', 'INPUT', 'TEXTAREA'].includes(event.target.tagName)) return;
   const controlCodes = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'KeyW', 'KeyA', 'KeyS', 'KeyD', 'Space', 'KeyP', 'Escape'];
   if (game.state !== 'menu' && controlCodes.includes(event.code) && !(event.code === 'Space' && event.target instanceof HTMLButtonElement)) event.preventDefault();
   keys.add(event.code);
@@ -331,6 +538,7 @@ $('touch-dash').addEventListener('pointerdown', event => { event.preventDefault(
 function syncUI() {
   const changed = previousState !== game.state || previousLevel !== game.level;
   if (changed) {
+    syncProgress(); renderLoadout();
     $('overlay').hidden = game.state === 'playing';
     for (const [id, state] of [['welcome', 'menu'], ['pause-dialog', 'paused'], ['upgrade-dialog', 'upgrade']]) $(id).hidden = game.state !== state;
     $('end-dialog').hidden = !['won', 'lost'].includes(game.state);
@@ -340,7 +548,7 @@ function syncUI() {
       clearInput();
       $('upgrade-choices').replaceChildren(...game.choices.map((choice, index) => {
         const button = document.createElement('button'); button.className = 'upgrade-card';
-        button.innerHTML = `<span class="upgrade-icon" aria-hidden="true">${choice.icon}</span><strong>${choice.name}</strong><p>${choice.description}</p><small>ВЫБРАТЬ · ${index + 1}</small>`;
+        button.innerHTML = `<span class="upgrade-icon" aria-hidden="true">${choice.icon}</span><strong>${choice.name}</strong><span class="upgrade-rank">${choice.spell ? (game.player.magic[choice.id] ? `РАНГ ${game.player.magic[choice.id]} → ${game.player.magic[choice.id] + 1}` : 'НОВОЕ ЗАКЛИНАНИЕ') : 'ПАССИВНОЕ УСИЛЕНИЕ'}</span><p>${choice.description}</p><small>ВЫБРАТЬ · ${index + 1}</small>`;
         button.addEventListener('click', () => choose(index)); return button;
       }));
       tone(784, .25);
@@ -368,90 +576,154 @@ function syncUI() {
   $('health-bar').style.width = `${game.player.hp / game.player.maxHp * 100}%`;
   $('health-bar').style.background = game.player.hp < game.player.maxHp * .3 ? '#ed9b8d' : '#d4f793';
   $('xp-bar').style.width = `${clamp(game.xp / xpRequired(game.level) * 100, 0, 100)}%`;
+  $('xp-text').textContent = `ОПЫТ ${game.xp} / ${xpRequired(game.level)}`;
   $('level').textContent = game.level; $('kills').textContent = game.kills;
   $('wave-label').textContent = game.state === 'menu' ? 'ОЖИДАНИЕ ЗАБЕГА' : `ВОЛНА ${Math.min(4, 1 + Math.floor(game.time / 45))} / 4`;
   $('dash-label').textContent = game.player.dashCooldown > 0 ? `РЫВОК · ${game.player.dashCooldown.toFixed(1)} С` : `${isTouch ? '↯' : 'ПРОБЕЛ'} · РЫВОК ГОТОВ`;
 }
 
-function circle(x, y, radius, color) { ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2); ctx.fill(); }
+function circle(x, y, radius, color) { ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y, Math.max(0, radius), 0, Math.PI * 2); ctx.fill(); }
 function diamond(x, y, radius, color) { ctx.fillStyle = color; ctx.beginPath(); ctx.moveTo(x, y - radius); ctx.lineTo(x + radius * .65, y); ctx.lineTo(x, y + radius); ctx.lineTo(x - radius * .65, y); ctx.closePath(); ctx.fill(); }
 function glow(x, y, radius, color) { const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius); gradient.addColorStop(0, color); gradient.addColorStop(1, 'transparent'); circle(x, y, radius, gradient); }
-const background = document.createElement('canvas'); background.width = WIDTH; background.height = HEIGHT;
-const bg = background.getContext('2d');
-function prepareBackground() {
-  bg.fillStyle = '#122329'; bg.fillRect(0, 0, WIDTH, HEIGHT);
-  const grad = bg.createRadialGradient(WIDTH / 2, HEIGHT / 2, 50, WIDTH / 2, HEIGHT / 2, 650); grad.addColorStop(0, '#1b3335'); grad.addColorStop(1, '#0b1921'); bg.fillStyle = grad; bg.fillRect(0, 0, WIDTH, HEIGHT);
-  bg.strokeStyle = '#759f7c09'; bg.lineWidth = 1;
-  for (let x = 0; x < WIDTH; x += 56) { bg.beginPath(); bg.moveTo(x, 0); bg.lineTo(x, HEIGHT); bg.stroke(); }
-  for (let y = 0; y < HEIGHT; y += 56) { bg.beginPath(); bg.moveTo(0, y); bg.lineTo(WIDTH, y); bg.stroke(); }
-  bg.save(); bg.translate(WIDTH / 2, HEIGHT / 2); bg.strokeStyle = '#aecb8d0e';
-  for (const radius of [115, 122, 212, 219]) { bg.beginPath(); bg.arc(0, 0, radius, 0, Math.PI * 2); bg.stroke(); }
-  for (let i = 0; i < 12; i++) { bg.save(); bg.rotate(i * Math.PI / 6); bg.strokeRect(-5, 198, 10, 10); bg.restore(); }
-  bg.restore();
-  for (const s of scenery) {
-    bg.strokeStyle = '#47625425'; bg.lineWidth = 1; bg.beginPath(); bg.moveTo(s.x, s.y + 5); bg.lineTo(s.x - 2, s.y - s.size); bg.moveTo(s.x, s.y + 5); bg.lineTo(s.x + 4, s.y); bg.stroke();
-    if (s.size > 3) { bg.fillStyle = '#263a3b'; bg.beginPath(); bg.ellipse(s.x + 12, s.y, 5 + s.size, 3 + s.size, -.4, 0, Math.PI * 2); bg.fill(); }
+function outline(x, y, radius, color, width = 1) { ctx.strokeStyle = color; ctx.lineWidth = width; ctx.beginPath(); ctx.arc(x, y, radius, 0, Math.PI * 2); ctx.stroke(); }
+const terrainHash = (x, y) => { const n = Math.sin(x * 127.1 + y * 311.7) * 43758.5453; return n - Math.floor(n); };
+function drawWorld(camera) {
+  ctx.fillStyle = theme.ground; ctx.fillRect(camera.x, camera.y, WIDTH, HEIGHT);
+  const size = 96;
+  for (let ix = Math.floor(camera.x / size) - 1; ix <= Math.ceil((camera.x + WIDTH) / size); ix++) {
+    for (let iy = Math.floor(camera.y / size) - 1; iy <= Math.ceil((camera.y + HEIGHT) / size); iy++) {
+      const hash = terrainHash(ix, iy), x = ix * size + hash * 68, y = iy * size + terrainHash(iy + 3, ix) * 68;
+      ctx.strokeStyle = theme.grid; ctx.lineWidth = 1; ctx.strokeRect(ix * size, iy * size, size, size);
+      ctx.globalAlpha = .5;
+      if (theme.id === 'frost') {
+        diamond(x, y, 5 + hash * 12, theme.detail); diamond(x + 9, y + 4, 5, theme.detail);
+      } else if (theme.id === 'embers') {
+        ctx.strokeStyle = theme.detail; ctx.beginPath(); ctx.moveTo(x - 9, y - 8); ctx.lineTo(x, y); ctx.lineTo(x - 3, y + 9); ctx.lineTo(x + 8, y + 17); ctx.stroke();
+        if (hash > .7) circle(x + 5, y + 3, 2, theme.light);
+      } else if (theme.id === 'astral') {
+        outline(x, y, 3 + hash * 8, theme.detail); diamond(x + 13, y - 7, 2, theme.light);
+      } else {
+        ctx.strokeStyle = theme.detail; ctx.beginPath(); ctx.moveTo(x, y + 9); ctx.lineTo(x - 3, y - 4); ctx.moveTo(x, y + 9); ctx.lineTo(x + 6, y); ctx.stroke();
+        ctx.fillStyle = theme.detail; ctx.beginPath(); ctx.ellipse(x + 21, y, 4 + hash * 7, 3 + hash * 4, -.4, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      const t = reducedMotion ? 0 : ambientTime;
+      if (hash > .55) { ctx.globalAlpha = .25 + Math.sin(t + hash * 10) * .15; circle(x + Math.sin(t * .3 + hash) * 10, y - 20, 1.5, theme.light); ctx.globalAlpha = 1; }
+    }
   }
-  for (let i = 0; i < 20; i++) {
-    const x = i * 65 - 40, y = i % 2 ? 12 : HEIGHT - 12;
-    bg.fillStyle = '#0b1b21'; bg.beginPath(); bg.moveTo(x - 45, y); bg.lineTo(x - 10, y + (y < 100 ? 68 : -68)); bg.lineTo(x + 25, y); bg.fill();
+  // Ruins repeat across world coordinates, not screen coordinates: no border walls.
+  for (let ix = Math.floor(camera.x / 700); ix <= Math.ceil((camera.x + WIDTH) / 700); ix++) {
+    for (let iy = Math.floor(camera.y / 700); iy <= Math.ceil((camera.y + HEIGHT) / 700); iy++) {
+      if (terrainHash(ix + 7, iy + 2) > .4 && (ix || iy)) continue;
+      const x = ix * 700, y = iy * 700;
+      outline(x, y, 110, `${theme.light}14`); outline(x, y, 118, `${theme.light}0c`);
+      for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; diamond(x + Math.cos(a) * 114, y + Math.sin(a) * 114, 4, `${theme.light}20`); }
+    }
   }
 }
-prepareBackground();
-function render() {
-  ctx.drawImage(background, 0, 0);
-  const t = reducedMotion ? 0 : ambientTime;
-  for (let i = 0; i < 28; i++) {
-    const s = scenery[i]; const x = s.x + Math.sin(t * .3 + s.phase) * 15, y = s.y + Math.cos(t * .2 + s.phase) * 11;
-    circle(x, y, 1.2, `rgba(186,220,142,${.15 + Math.sin(t + s.phase) * .12})`);
+function drawZone(zone) {
+  const pulse = reducedMotion ? 0 : Math.sin(ambientTime * 4) * 4;
+  circle(zone.x, zone.y, zone.radius, `${zone.color}0e`);
+  if (zone.kind === 'meteor') {
+    outline(zone.x, zone.y, zone.radius, `${zone.color}88`, 2);
+    outline(zone.x, zone.y, zone.radius * clamp(zone.age / .8, 0, 1), zone.color, 2);
+    ctx.strokeStyle = zone.color; ctx.beginPath(); ctx.moveTo(zone.x - 10, zone.y); ctx.lineTo(zone.x + 10, zone.y); ctx.moveTo(zone.x, zone.y - 10); ctx.lineTo(zone.x, zone.y + 10); ctx.stroke();
+  } else if (zone.kind === 'void') {
+    glow(zone.x, zone.y, zone.radius, '#bb9bff25'); circle(zone.x, zone.y, 22 + pulse, '#161124');
+    for (let i = 0; i < 3; i++) { ctx.strokeStyle = `${zone.color}77`; ctx.lineWidth = 2; ctx.beginPath(); ctx.ellipse(zone.x, zone.y, 35 + i * 22, 15 + i * 11, ambientTime + i, 0, Math.PI * 1.5); ctx.stroke(); }
+  } else if (zone.kind === 'poison') {
+    for (let i = 0; i < 7; i++) { const a = i * 2.4; circle(zone.x + Math.cos(a) * zone.radius * .5, zone.y + Math.sin(a) * zone.radius * .5, zone.radius * .4 + pulse, `${zone.color}12`); }
+    outline(zone.x, zone.y, zone.radius, `${zone.color}33`);
+  } else if (zone.kind === 'storm') {
+    for (let i = -1; i <= 1; i++) circle(zone.x + i * 21, zone.y - 40, 27, '#7681b44a');
+    outline(zone.x, zone.y, zone.radius, `${zone.color}33`);
+  } else if (zone.kind === 'runes') {
+    ctx.save(); ctx.translate(zone.x, zone.y); ctx.rotate(Math.PI / 4); ctx.strokeStyle = zone.age > .7 ? zone.color : `${zone.color}44`; ctx.lineWidth = 2; ctx.strokeRect(-14, -14, 28, 28); ctx.restore();
+    diamond(zone.x, zone.y, 7, zone.color); outline(zone.x, zone.y, 29, `${zone.color}55`);
   }
-  if (game.state === 'menu') {
-    for (let i = 0; i < 7; i++) { const a = i * 1.2, x = WIDTH / 2 + Math.cos(a) * 340, y = HEIGHT / 2 + Math.sin(a) * 220; drawEnemy({ x, y, radius: i % 3 === 0 ? 19 : 13, type: i % 3 === 0 ? 'brute' : 'shade', hit: 0, phase: i }); }
-    for (const s of scenery.slice(30, 42)) diamond(s.x, s.y, 5, '#84c6a980');
-    return;
+}
+function drawEffect(e) {
+  const alpha = clamp(e.life / e.maxLife, 0, 1); ctx.globalAlpha = alpha;
+  if (e.kind === 'ring') { outline(e.x, e.y, e.radius * (1 - alpha * .8), e.color, 2 + alpha * 3); outline(e.x, e.y, e.radius, `${e.color}66`); }
+  if (e.kind === 'beam' || e.kind === 'bolt') {
+    ctx.strokeStyle = e.color; ctx.lineWidth = e.kind === 'beam' ? e.radius * alpha : 2;
+    ctx.beginPath(); ctx.moveTo(e.x, e.y);
+    if (e.kind === 'bolt') for (let i = 1; i < 7; i++) ctx.lineTo(e.x + (e.x2 - e.x) * i / 7 + (i % 2 ? -9 : 9), e.y + (e.y2 - e.y) * i / 7);
+    ctx.lineTo(e.x2, e.y2); ctx.stroke();
+    if (e.kind === 'beam') { ctx.strokeStyle = '#fff8df'; ctx.lineWidth = 2; ctx.stroke(); }
   }
-  for (const gem of game.gems) { diamond(gem.x, gem.y, gem.value > 2 ? 7 : 5, '#84dcc3'); diamond(gem.x - 1, gem.y - 1, 2, '#e2ffdf'); }
-  for (const ring of game.rings) { ctx.strokeStyle = `rgba(174,222,247,${ring.life * 1.5})`; ctx.lineWidth = 2 + ring.life * 4; ctx.beginPath(); ctx.arc(ring.x, ring.y, ring.radius * (1 - ring.life), 0, Math.PI * 2); ctx.stroke(); ctx.strokeStyle = `rgba(174,222,247,${ring.life * .4})`; ctx.beginPath(); ctx.arc(ring.x, ring.y, ring.radius, 0, Math.PI * 2); ctx.stroke(); }
-  for (const enemy of game.enemies) drawEnemy(enemy);
-  for (const bullet of game.bullets) {
-    ctx.strokeStyle = '#b9efad70'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(bullet.x - bullet.vx * .025, bullet.y - bullet.vy * .025); ctx.lineTo(bullet.x, bullet.y); ctx.stroke(); circle(bullet.x, bullet.y, 4, '#e2ffc1');
-  }
-  const p = game.player;
-  glow(p.x, p.y, 75, '#c5ef8f14');
-  const moons = orbitPositions(game);
-  if (moons.length) { ctx.strokeStyle = '#aacdb51c'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(p.x, p.y, 69, 0, Math.PI * 2); ctx.stroke(); }
-  for (const moon of moons) { glow(moon.x, moon.y, 19, '#a5eddf40'); diamond(moon.x, moon.y, 10, '#b2ffe7'); }
-  ctx.save(); ctx.translate(p.x, p.y);
-  if (p.invincible > 0 && Math.floor(p.invincible * 22) % 2) ctx.globalAlpha = .55;
-  ctx.fillStyle = '#0004'; ctx.beginPath(); ctx.ellipse(0, 16, 18, 7, 0, 0, Math.PI * 2); ctx.fill();
-  const bob = reducedMotion ? 0 : Math.sin(t * 5) * 1.5;
-  ctx.translate(0, bob);
-  ctx.fillStyle = '#4e8c80'; ctx.beginPath(); ctx.moveTo(0, -12); ctx.quadraticCurveTo(-12, -10, -17, 16); ctx.quadraticCurveTo(0, 24, 17, 16); ctx.quadraticCurveTo(12, -10, 0, -12); ctx.fill();
-  ctx.fillStyle = '#263e3e'; ctx.beginPath(); ctx.moveTo(0, -10); ctx.lineTo(-6, 15); ctx.lineTo(8, 15); ctx.fill();
-  circle(0, -10, 10, '#78a88d'); circle(0, -7, 7, '#152d31');
-  circle(-3, -8, 1.5, '#e3ffc1'); circle(3, -8, 1.5, '#e3ffc1');
-  ctx.strokeStyle = '#bbcb9b'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(17, 16); ctx.lineTo(17, -16); ctx.stroke(); diamond(17, -21, 6, '#d4f793');
-  if (p.dashTime > 0) { ctx.strokeStyle = '#d4f793'; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(0, 0, 24, 0, Math.PI * 2); ctx.stroke(); }
-  ctx.restore();
-  for (const particle of game.particles) { ctx.globalAlpha = particle.life / particle.maxLife; circle(particle.x, particle.y, 2, particle.color); } ctx.globalAlpha = 1;
-  if (p.hp < p.maxHp * .3) { ctx.strokeStyle = '#cd665b55'; ctx.lineWidth = 10; ctx.strokeRect(0, 0, WIDTH, HEIGHT); }
+  if (e.kind === 'meteor') { glow(e.x, e.y, e.radius, '#ff907a55'); ctx.strokeStyle = e.color; ctx.lineWidth = 10 * alpha; ctx.beginPath(); ctx.moveTo(e.x - alpha * 90, e.y - alpha * 150); ctx.lineTo(e.x, e.y); ctx.stroke(); circle(e.x, e.y, 13 * alpha, '#fff0bd'); }
+  ctx.globalAlpha = 1;
 }
 function drawEnemy(enemy) {
   const { x, y, radius: r, type } = enemy;
   const bob = reducedMotion ? 0 : Math.sin(ambientTime * 4 + enemy.phase) * 3;
+  const body = enemy.hit ? '#e9ffdf' : enemy.slow > 0 ? '#81cce2' : type === 'brute' ? skin.heavy : skin.body;
   ctx.save(); ctx.translate(x, y + bob);
   ctx.fillStyle = '#0003'; ctx.beginPath(); ctx.ellipse(0, r, r, r * .35, 0, 0, Math.PI * 2); ctx.fill();
-  if (type === 'wisp') {
-    diamond(0, 0, r * 1.5, enemy.hit ? '#fff' : '#a8a0d1'); diamond(0, 1, r * .8, '#423f63'); circle(0, -1, 2, '#ece6ff');
-  } else {
-    ctx.fillStyle = enemy.hit ? '#e9ffdf' : type === 'brute' ? '#836d66' : '#546d69';
-    ctx.beginPath(); ctx.moveTo(-r, r); ctx.quadraticCurveTo(-r * 1.4, -r, 0, -r * 1.1); ctx.quadraticCurveTo(r * 1.4, -r, r, r); ctx.lineTo(r * .4, r * .65); ctx.lineTo(0, r); ctx.lineTo(-r * .4, r * .65); ctx.closePath(); ctx.fill();
-    ctx.fillStyle = type === 'brute' ? '#382e32' : '#20373b'; ctx.beginPath(); ctx.ellipse(0, -r * .1, r * .65, r * .5, 0, 0, Math.PI * 2); ctx.fill();
-    circle(-r * .27, -r * .14, type === 'brute' ? 2.5 : 1.8, type === 'brute' ? '#f6b4a0' : '#b7e7d0'); circle(r * .27, -r * .14, type === 'brute' ? 2.5 : 1.8, type === 'brute' ? '#f6b4a0' : '#b7e7d0');
-    if (type === 'brute') { ctx.strokeStyle = '#c09f82'; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(-r * .6, -r * .7); ctx.lineTo(-r * .9, -r * 1.4); ctx.moveTo(r * .6, -r * .7); ctx.lineTo(r * .9, -r * 1.4); ctx.stroke(); }
+  if (skin.id === 'crystals') {
+    diamond(0, 0, r * 1.4, body); diamond(-r * .5, r * .2, r * .8, body); diamond(r * .5, r * .3, r * .7, skin.heavy);
+    ctx.strokeStyle = skin.eye; ctx.beginPath(); ctx.moveTo(0, -r); ctx.lineTo(0, r); ctx.stroke();
+  } else if (skin.id === 'masks') {
+    ctx.fillStyle = body; ctx.beginPath(); ctx.moveTo(-r, -r); ctx.lineTo(r, -r); ctx.lineTo(r * .75, r * .65); ctx.lineTo(0, r * 1.15); ctx.lineTo(-r * .75, r * .65); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = skin.face; ctx.fillRect(-r * .6, -r * .3, r * .4, r * .2); ctx.fillRect(r * .2, -r * .3, r * .4, r * .2); ctx.fillRect(-2, r * .3, 4, r * .45);
+  } else if (skin.id === 'cinders') {
+    glow(0, 0, r * 1.8, '#ff9e6420'); ctx.fillStyle = body;
+    ctx.beginPath(); ctx.moveTo(-r, r * .6); ctx.quadraticCurveTo(-r * 1.2, -r * .4, -r * .4, -r); ctx.lineTo(0, -r * 1.6); ctx.lineTo(r * .5, -r * .4); ctx.quadraticCurveTo(r * 1.6, r, 0, r); ctx.fill();
+    circle(0, r * .1, r * .4, skin.face);
+  } else if (type === 'wisp') { diamond(0, 0, r * 1.5, enemy.hit ? '#fff' : '#a8a0d1'); diamond(0, 1, r * .8, '#423f63'); }
+  else {
+    ctx.fillStyle = body; ctx.beginPath(); ctx.moveTo(-r, r); ctx.quadraticCurveTo(-r * 1.4, -r, 0, -r * 1.1); ctx.quadraticCurveTo(r * 1.4, -r, r, r); ctx.lineTo(r * .4, r * .65); ctx.lineTo(0, r); ctx.lineTo(-r * .4, r * .65); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = skin.face; ctx.beginPath(); ctx.ellipse(0, -r * .1, r * .65, r * .5, 0, 0, Math.PI * 2); ctx.fill();
   }
+  circle(-r * .27, -r * .14, type === 'brute' ? 2.5 : 1.8, skin.eye); circle(r * .27, -r * .14, type === 'brute' ? 2.5 : 1.8, skin.eye);
+  if (type === 'brute') { ctx.strokeStyle = skin.eye; ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(-r * .6, -r * .7); ctx.lineTo(-r * .9, -r * 1.4); ctx.moveTo(r * .6, -r * .7); ctx.lineTo(r * .9, -r * 1.4); ctx.stroke(); }
+  if (enemy.slow > 0) outline(0, 0, r + 4, '#b4ecff77');
   ctx.restore();
 }
+function render() {
+  const p = game.player, camera = { x: p.x - WIDTH / 2, y: p.y - HEIGHT / 2 };
+  ctx.save(); ctx.translate(-camera.x, -camera.y); drawWorld(camera);
+  if (game.state === 'menu') {
+    for (let i = 0; i < 7; i++) { const a = i * 1.2; drawEnemy({ x: p.x + Math.cos(a) * Math.min(340, WIDTH * .4), y: p.y + Math.sin(a) * 220, radius: i % 3 === 0 ? 19 : 13, type: i % 3 === 0 ? 'brute' : 'shade', hit: 0, phase: i }); }
+    ctx.restore(); return;
+  }
+  for (const zone of game.zones) drawZone(zone);
+  for (const gem of game.gems) { diamond(gem.x, gem.y, gem.value > 2 ? 7 : 5, '#84dcc3'); diamond(gem.x - 1, gem.y - 1, 2, '#e2ffdf'); }
+  for (const enemy of game.enemies) drawEnemy(enemy);
+  for (const b of game.bullets) {
+    ctx.strokeStyle = `${b.color}70`; ctx.lineWidth = b.kind === 'fireball' ? 6 : 3; ctx.beginPath(); ctx.moveTo(b.x - b.vx * .025, b.y - b.vy * .025); ctx.lineTo(b.x, b.y); ctx.stroke();
+    if (b.kind === 'blade' || b.kind === 'boomerang') {
+      ctx.save(); ctx.translate(b.x, b.y); ctx.rotate(b.age * 16); ctx.strokeStyle = b.color; ctx.lineWidth = 3; ctx.beginPath(); ctx.arc(0, 0, b.kind === 'blade' ? 8 : 13, 0, Math.PI * 1.4); ctx.stroke(); ctx.restore();
+    } else { circle(b.x, b.y, b.radius, b.color); circle(b.x, b.y, b.radius * .4, '#fffbe2'); }
+  }
+  for (const e of game.effects) drawEffect(e);
+  glow(p.x, p.y, 75, '#c5ef8f14');
+  const moons = orbitPositions(game);
+  if (moons.length) outline(p.x, p.y, 69, '#aacdb51c');
+  for (const moon of moons) { glow(moon.x, moon.y, 19, '#a5eddf40'); diamond(moon.x, moon.y, 10, '#b2ffe7'); }
+  if (p.magic.familiar) { const f = familiarPosition(game); glow(f.x, f.y, 23, '#9ff4ea33'); diamond(f.x, f.y, 10, '#9ff4ea'); circle(f.x, f.y, 3, '#fff'); }
+  ctx.save(); ctx.translate(p.x, p.y);
+  if (p.invincible > 0 && Math.floor(p.invincible * 22) % 2) ctx.globalAlpha = .55;
+  ctx.fillStyle = '#0004'; ctx.beginPath(); ctx.ellipse(0, 16, 18, 7, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.translate(0, reducedMotion ? 0 : Math.sin(ambientTime * 5) * 1.5);
+  ctx.fillStyle = '#4e8c80'; ctx.beginPath(); ctx.moveTo(0, -12); ctx.quadraticCurveTo(-12, -10, -17, 16); ctx.quadraticCurveTo(0, 24, 17, 16); ctx.quadraticCurveTo(12, -10, 0, -12); ctx.fill();
+  ctx.fillStyle = '#263e3e'; ctx.beginPath(); ctx.moveTo(0, -10); ctx.lineTo(-6, 15); ctx.lineTo(8, 15); ctx.fill();
+  circle(0, -10, 10, '#78a88d'); circle(0, -7, 7, '#152d31'); circle(-3, -8, 1.5, '#e3ffc1'); circle(3, -8, 1.5, '#e3ffc1');
+  ctx.strokeStyle = '#bbcb9b'; ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(17, 16); ctx.lineTo(17, -16); ctx.stroke(); diamond(17, -21, 6, theme.accent);
+  if (p.dashTime > 0) outline(0, 0, 24, theme.accent, 2);
+  ctx.restore();
+  for (const particle of game.particles) { ctx.globalAlpha = particle.life / particle.maxLife; circle(particle.x, particle.y, 2, particle.color); } ctx.globalAlpha = 1;
+  // Draw after combat effects so health remains legible directly above the mage.
+  const healthWidth = WIDTH < 600 ? 96 : 66, healthTop = p.y - (WIDTH < 600 ? 59 : 50);
+  ctx.fillStyle = '#071419ee'; ctx.fillRect(p.x - healthWidth / 2, healthTop, healthWidth, 23);
+  ctx.fillStyle = '#ffffff26'; ctx.fillRect(p.x - healthWidth / 2 + 3, healthTop + 16, healthWidth - 6, 5);
+  ctx.fillStyle = p.hp < p.maxHp * .3 ? '#ff9b87' : '#d4f793'; ctx.fillRect(p.x - healthWidth / 2 + 3, healthTop + 16, (healthWidth - 6) * clamp(p.hp / p.maxHp, 0, 1), 5);
+  ctx.font = `${WIDTH < 600 ? 12 : 10}px system-ui`; ctx.textAlign = 'center'; ctx.fillStyle = '#edf6e8'; ctx.fillText(`${Math.ceil(p.hp)} / ${p.maxHp}`, p.x, healthTop + 12);
+  ctx.restore();
+  if (p.hp < p.maxHp * .3) { ctx.strokeStyle = '#cd665b55'; ctx.lineWidth = 10; ctx.strokeRect(0, 0, WIDTH, HEIGHT); }
+}
+
 let uiTime = 0;
 function frame(timestamp) {
   const dt = lastFrame ? Math.min((timestamp - lastFrame) / 1000, .05) : 0;
@@ -460,6 +732,9 @@ function frame(timestamp) {
   update(game, { x: Number(keys.has('KeyD') || keys.has('ArrowRight')) - Number(keys.has('KeyA') || keys.has('ArrowLeft')) + touch.x, y: Number(keys.has('KeyS') || keys.has('ArrowDown')) - Number(keys.has('KeyW') || keys.has('ArrowUp')) + touch.y }, dt);
   if (game.kills > kills) tone(440 + game.kills % 5 * 55, .05, .015);
   if (game.player.hp < hp) tone(100, .12, .05);
+  saveTimer += dt;
+  if (saveTimer >= 1) { syncProgress(); saveTimer = 0; }
+  if (ambientTime >= toastUntil) $('unlock-toast').hidden = true;
   uiTime += dt;
   if (uiTime > .08 || previousState !== game.state || previousLevel !== game.level) { syncUI(); uiTime = 0; }
   render(); requestAnimationFrame(frame);
