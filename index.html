@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1114">
+  <meta name="description" content="LUMEN: Последний круг — бесплатная игра на выживание. Собирай осколки, усиливай магию и переживи три минуты тьмы.">
+  <title>LUMEN — Последний круг</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <a class="brand" href="./" aria-label="Lumen — главная"><span class="brand-symbol">✧</span><span>LUMEN<small>ПОСЛЕДНИЙ КРУГ</small></span></a>
+      <div class="header-note"><span class="status-dot"></span> МАЛЕНЬКАЯ МАГИЯ. БОЛЬШОЙ ХАОС.</div>
+      <button class="icon-button" id="sound-button" aria-label="Включить звук" aria-pressed="false">Звук: выкл.</button>
+    </header>
+    <main>
+      <div class="intro"><div><p class="eyebrow">АРКАДА НА ВЫЖИВАНИЕ / 01</p><h1>Останься светом.</h1></div><p>Тьма наступает. Твоя магия — тоже.<br>Один маг. Три минуты. Ещё одна попытка.</p></div>
+      <div class="game-layout">
+        <section class="arena-panel" aria-label="Игровая арена">
+          <div class="arena-top"><span><i class="live-dot"></i> СУМЕРЕЧНАЯ РОЩА</span><span id="wave-label">ОЖИДАНИЕ ЗАБЕГА</span></div>
+          <div class="game-stage" id="stage">
+            <canvas id="game" width="1120" height="680" tabindex="0" aria-label="Арена. Двигайтесь на WASD или стрелках, пробел — рывок, P — пауза."></canvas>
+            <div class="hud" id="hud" hidden><div class="hud-health"><span>ЖИЗНЬ <b id="health-text">100 / 100</b></span><div class="bar"><i id="health-bar"></i></div></div><div class="hud-center"><strong id="timer">00:00</strong><small>ДО РАССВЕТА 03:00</small></div><div class="hud-right"><span>УРОВЕНЬ <b id="level">1</b></span><span>ПОБЕЖДЕНО <b id="kills">0</b></span><button id="pause-button" aria-label="Приостановить игру"><svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M1 1h3v12H1zM8 1h3v12H8z"/></svg></button></div></div>
+            <div class="xp-hud" id="xp-hud" hidden><span>ОСКОЛКИ СВЕТА</span><div class="bar"><i id="xp-bar"></i></div><span id="dash-label">ПРОБЕЛ · РЫВОК ГОТОВ</span></div>
+            <div class="overlay" id="overlay">
+              <div class="welcome" id="welcome"><div class="sigil" aria-hidden="true"><span>✧</span></div><p class="eyebrow">СВЕТ ЕЩЁ НЕ ПОГАС</p><h2>Последний круг</h2><p class="overlay-copy">Двигайся. Собирай осколки. Становись сильнее.<br>Заклинания найдут врагов сами.</p><button class="primary" id="start-button">Войти в рощу <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button><div class="welcome-meta"><span>◷ 3 минуты</span><span>✧ Автомагия</span><span>↻ Новый забег</span></div></div>
+              <div class="dialog" id="pause-dialog" hidden><p class="eyebrow">МИР ПОДОЖДЁТ</p><h2>Тихий момент</h2><p class="overlay-copy">Соберись с мыслями. Свет всё ещё с тобой.</p><button class="primary" id="resume-button">Продолжить <span>→</span></button></div>
+              <div class="upgrade-dialog" id="upgrade-dialog" hidden><p class="eyebrow">ТВОЯ МАГИЯ РАСТЁТ</p><h2>Выбери свой свет</h2><p class="overlay-copy">Одно усиление. Много новых возможностей.</p><div class="upgrade-grid" id="upgrade-choices"></div><p class="keyboard-hint">Выбор: клавиши 1, 2, 3 или нажатие на карточку</p></div>
+              <div class="dialog" id="end-dialog" hidden><p class="eyebrow" id="end-eyebrow">ЕЩЁ ОДНА ИСКРА</p><h2 id="end-title">Свет вернётся</h2><p class="overlay-copy" id="end-copy"></p><div class="results"><div><strong id="result-time"></strong><span>ВРЕМЯ</span></div><div><strong id="result-kills"></strong><span>ПОБЕЖДЕНО</span></div><div><strong id="result-level"></strong><span>УРОВЕНЬ</span></div></div><button class="primary" id="restart-button">Ещё одна попытка <span>↻</span></button></div>
+            </div>
+            <div class="touch-controls" id="touch-controls" hidden><div id="joystick" aria-label="Область управления движением"><div id="joystick-knob"></div></div><button id="touch-dash" aria-label="Рывок">↯</button></div>
+          </div>
+          <div class="arena-bottom"><span><span class="status-dot"></span> МАГИЯ РАБОТАЕТ АВТОМАТИЧЕСКИ</span><span>ДОЖИВИ ДО РАССВЕТА <b>03:00</b></span></div>
+        </section>
+        <aside class="sidebar"><section class="guide-card"><p class="eyebrow">ПОЛЕВЫЕ ЗАМЕТКИ</p><h3>Всё в твоих руках.</h3><div class="control-row"><div class="key-cluster"><kbd>W</kbd><span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></span></div><p>Двигайся<small>или используй стрелки</small></p></div><div class="control-row"><kbd class="wide-key">SPACE</kbd><p>Рывок<small>сквозь опасность</small></p></div><div class="control-row"><kbd>P</kbd><p>Пауза<small>можно выдохнуть</small></p></div><p class="touch-tip">На телефоне: джойстик слева и рывок справа.</p></section><section class="guide-card shard-card"><span class="shard-icon">◆</span><p class="eyebrow">СОБИРАЙ ОСКОЛКИ</p><h3>Из искры — в бурю.</h3><p>Осколки побеждённых врагов дают опыт. Новый уровень — новое усиление магии.</p></section><section class="record-card"><span>ЛИЧНЫЙ РЕКОРД</span><strong id="record">00:00</strong><small id="record-caption">Каждая попытка — начало.</small></section></aside>
+      </div>
+    </main>
+    <footer><span>LUMEN <span class="footer-separator">/</span> Сделано из света и упрямства.</span><span>Без загрузок. Без аккаунта. Просто игра.</span></footer>
+  </div>
+  <script type="module" src="./src/game.js"></script>
+</body>
+</html>
